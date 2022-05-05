@@ -1,4 +1,9 @@
-import "./style/scss/style.scss";
+import "./style/scss/_custom.scss";
+// You can specify which plugins you need
+import * as all from "bootstrap";
+// import { Tooltip, Toast, Popover } from "bootstrap";
+console.log(all);
+
 // import retrieveContent from "query.js";
 
 // async function showContent() {
