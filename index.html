@@ -7,12 +7,26 @@
     <title>ToDoList</title>
   </head>
   <body>
+    <nav class="navbar navbar-exapnd-lg fixed-top navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand text-brand">Do The Day</a>
+        <div class="row row-cols-auto">
+          <div class="col">
+            <form action="" class="row form-inline my-2 col-xs">
+              <input type="text" class="form-control form-control-sm w-25 mr-sm-1" />
+              <input type="text" class="form-control form-control-sm w-25 mr-sm-1" />
+            </form>
+          </div>
+          <a href="#" class="navbar-brand col-xs mt-1 text-date">20/05/2022</a>
+        </div>
+      </div>
+    </nav>
     <div class="container">
       <p class="title">ToDo List</p>
       <div class="container-form">
         <form action="">
-          <input id="input-article" type="text" />
-          <input id="input-categorie" type="search" />
+          <input name="input_article" id="input-article" type="text" />
+          <input name="input_categorie" id="input-categorie" type="text" />
           <button class="button">Ajouter</button>
         </form>
         <ul>

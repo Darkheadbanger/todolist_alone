@@ -1,22 +1,25 @@
-// @import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap";
+
+@import "./utils/variables.scss";
+@import "./utils/fonctions.scss";
+@import "./utils/mixins.scss";
+@import "./utils/animations.scss";
+
+@import "./base/fondation.scss";
+@import "./base/typographie.scss";
+// @import "./components/buttons";
+// @import "./layouts/header";
+// @import "./layouts/nav";
+// @import "./layouts/container";
+// @import "./layouts/form";
+// @import "./pages/work";
+// @import "./pages/about";
+// @import "./pages/project";
 
 // // $color-text: red;
 // body {
 //   background: linear-gradient(#f38353, #fd2525);
-// }
-
-* body {
-  box-sizing: border-box;
-  background: linear-gradient(#f38353, #fd2525);
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+// } 
 
 p {
   margin: 0;
@@ -27,6 +30,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 50px 0 0 0;
 }
 
 .title {
@@ -123,7 +127,6 @@ li {
 li p {
   flex: 1;
 }
-
 li .todo {
   flex: 0 0 20px;
   height: 20px;
