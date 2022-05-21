@@ -1,3 +1,7 @@
-body, .text-date, .text-brand {
-  font-size: medium;
+body {
+  .text-date {
+    &--typo {
+      font-size: medium;
+    }
+  }
 }

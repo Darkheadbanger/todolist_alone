@@ -9,15 +9,53 @@
   <body>
     <nav class="navbar navbar-exapnd-lg fixed-top navbar-dark bg-dark">
       <div class="container-fluid">
-        <a href="#" class="navbar-brand text-brand">Do The Day</a>
-        <div class="row row-cols-auto">
+        <div class="ms-3">
+          <i class="fa-solid fa-list-check text-light fa-xl"></i>
+          <a href="#" class="navbar-brand text-brand me-5">Do The Day</a>
+        </div>
+        <div class="row row-cols-auto search-bar search-bar__position">
           <div class="col">
             <form action="" class="row form-inline my-2 col-xs">
-              <input type="text" class="form-control form-control-sm w-25 mr-sm-1" />
-              <input type="text" class="form-control form-control-sm w-25 mr-sm-1" />
+              <i
+                class="fa-solid fa-magnifying-glass text-light search-icon search-icon__position position-fixed"
+              ></i>
+              <input
+                type="text"
+                class="form-control col form-control-sm w-25 mr-sm-1 border border-dark rounded input input__shadow input--bg-color"
+                autocomplete="search-keyword-suggestions"
+                maxlength="500"
+                aria-hidden="true"
+                value=""
+                placeholder="Hello"
+              />
+              <i
+                class="fa-solid fa-magnifying-glass text-light search-icon1 search-icon1__position position-fixed"
+              ></i>
+              <input
+                type="text"
+                class="form-control col form-control-sm w-25 mr-sm-1 border border-dark rounded input input__shadow input--bg-color"
+                autocomplete="search-keyword-suggestions"
+                maxlength="500"
+                aria-hidden="true"
+                value=""
+                placeholder="Hello"
+              />
             </form>
           </div>
-          <a href="#" class="navbar-brand col-xs mt-1 text-date">20/05/2022</a>
+          <div class="row">
+            <p
+              href="#"
+              class="navbar-brand text-date text-date--typo text-date__spacing me-5"
+            >
+              20/05/2022
+            </p>
+            <p
+              href="#"
+              class="navbar-brand text-date text-date--typo text-date__spacing me-5"
+            >
+              10H00
+            </p>
+          </div>
         </div>
       </div>
     </nav>

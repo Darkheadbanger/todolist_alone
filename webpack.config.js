@@ -36,6 +36,14 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(svg|eot|woff|woff2|ttf)$/,
+        type: "asset/ressource",
+        generator: {
+          //publicPath: '../fonts/',
+          filename: "compiled/fonts/[hash][ext][query]",
+        },
+      },
     ],
   },
   plugins: [

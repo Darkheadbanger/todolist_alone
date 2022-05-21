@@ -1,4 +1,5 @@
-@import "~bootstrap/scss/bootstrap";
+@import "./vendors/fontawesome.scss";
+@import "./vendors/bootstrap.scss";
 
 @import "./utils/variables.scss";
 @import "./utils/fonctions.scss";
@@ -7,19 +8,17 @@
 
 @import "./base/fondation.scss";
 @import "./base/typographie.scss";
+
 // @import "./components/buttons";
 // @import "./layouts/header";
-// @import "./layouts/nav";
-// @import "./layouts/container";
-// @import "./layouts/form";
-// @import "./pages/work";
-// @import "./pages/about";
-// @import "./pages/project";
+@import "./layouts/nav.scss";
+
+@import "./pages/input.scss";
 
 // // $color-text: red;
 // body {
 //   background: linear-gradient(#f38353, #fd2525);
-// } 
+// }
 
 p {
   margin: 0;
