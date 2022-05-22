@@ -9,7 +9,7 @@
   }
   .search-bar {
     &__position {
-      margin: 0 -11rem 0px 0rem;
+      margin: 8px 0px 0px 9.5rem;
     }
     .text-date {
       &__spacing {
@@ -18,12 +18,12 @@
     }
     .search-icon {
       &__position {
-        margin: 8px 0px 0px 8rem;
+        margin: 8px 0px 0px 9.5rem;
       }
     }
     .search-icon1 {
       &__position {
-        margin: 8px 0px 0px 19rem;
+        margin: 8px 0px 0px 22.5rem;
       }
     }
   }
@@ -45,7 +45,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 31rem 5px 0 0;
+    padding: 14rem 5px 0 0;
   }
 }
 
