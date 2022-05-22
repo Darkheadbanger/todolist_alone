@@ -2,7 +2,15 @@
 div {
   div {
     form {
-      .input {
+      .input-top {
+        &::placeholder {
+          color: $placeholder-color;
+        }
+        &:focus {
+          background-color: $search-color-active;
+          color: $primary-color;
+        }
+
         &--bg-color {
           background-color: $search-color;
         }

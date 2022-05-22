@@ -1,4 +1,6 @@
 import "./style/scss/_custom.scss";
+import "./style/scss/_custom.css";
+
 import "./todo.js";
 
 import { ToDoList } from "./todo.js";

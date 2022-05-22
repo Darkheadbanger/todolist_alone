@@ -4,63 +4,151 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <title>ToDoList</title>
   </head>
   <body>
-    <nav class="navbar navbar-exapnd-lg fixed-top navbar-dark bg-dark">
-      <div class="container-fluid">
-        <div class="ms-3">
-          <i class="fa-solid fa-list-check text-light fa-xl"></i>
-          <a href="#" class="navbar-brand text-brand me-5">Do The Day</a>
-        </div>
-        <div class="row row-cols-auto search-bar search-bar__position">
-          <div class="col">
-            <form action="" class="row form-inline my-2 col-xs">
-              <i
-                class="fa-solid fa-magnifying-glass text-light search-icon search-icon__position position-fixed"
-              ></i>
-              <input
-                type="text"
-                class="form-control col form-control-sm w-25 mr-sm-1 border border-dark rounded input input__shadow input--bg-color"
-                autocomplete="search-keyword-suggestions"
-                maxlength="500"
-                aria-hidden="true"
-                value=""
-                placeholder="Hello"
-              />
-              <i
-                class="fa-solid fa-magnifying-glass text-light search-icon1 search-icon1__position position-fixed"
-              ></i>
-              <input
-                type="text"
-                class="form-control col form-control-sm w-25 mr-sm-1 border border-dark rounded input input__shadow input--bg-color"
-                autocomplete="search-keyword-suggestions"
-                maxlength="500"
-                aria-hidden="true"
-                value=""
-                placeholder="Hello"
-              />
-            </form>
-          </div>
-          <div class="row">
-            <p
-              href="#"
-              class="navbar-brand text-date text-date--typo text-date__spacing me-5"
+    <header>
+      <nav
+        class="
+          navbar navbar-exapnd-lg
+          fixed-top
+          navbar-dark navbar navbar__coulour
+        "
+      >
+        <div class="container-fluid">
+          <h1 class="row ms-5">
+            <i class="fa-solid fa-list-check text-light ms-5 col"></i>
+            <a href="#" class="navbar-brand text-brand col ms-title-custom"
+              >Do The Day</a
             >
-              20/05/2022
-            </p>
-            <p
-              href="#"
-              class="navbar-brand text-date text-date--typo text-date__spacing me-5"
-            >
-              10H00
-            </p>
+          </h1>
+          <div class="row row-cols-auto search-bar search-bar__position">
+            <div class="col">
+              <form action="" class="row form-inline my-2 col-xs">
+                <i
+                  class="
+                    fa-solid fa-magnifying-glass
+                    text-light
+                    search-icon search-icon__position
+                    position-fixed
+                  "
+                ></i>
+                <input
+                  type="text"
+                  class="
+                    form-control
+                    col
+                    form-control-sm
+                    w-25
+                    mr-sm-1
+                    border border-dark
+                    rounded
+                    input-top input-top__shadow input-top--bg-color
+                  "
+                  autocomplete="search-keyword-suggestions"
+                  maxlength="500"
+                  aria-hidden="true"
+                  value=""
+                  placeholder="Hello"
+                />
+                <i
+                  class="
+                    fa-solid fa-magnifying-glass
+                    text-light
+                    search-icon1 search-icon1__position
+                    position-fixed
+                  "
+                ></i>
+                <input
+                  type="text"
+                  class="
+                    form-control
+                    col
+                    form-control-sm
+                    w-25
+                    mr-sm-1
+                    border border-dark
+                    rounded
+                    input-top input-top__shadow input-top--bg-color
+                  "
+                  autocomplete="search-keyword-suggestions"
+                  maxlength="500"
+                  aria-hidden="true"
+                  value=""
+                  placeholder="Hello"
+                />
+              </form>
+            </div>
+            <div class="row">
+              <p
+                href="#"
+                class="
+                  navbar-brand
+                  text-date text-date--typo text-date__spacing
+                  me-5
+                "
+              >
+                20/05/2022
+              </p>
+              <p
+                href="#"
+                class="
+                  navbar-brand
+                  text-date text-date--typo text-date__spacing
+                  me-5
+                "
+              >
+                10H00
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+      <nav class="navbar-left navbar-left--colour fixed-top">
+        <div class="d-flex flex-column justify-content-between">
+          <div class="container py-5 px-5">
+            <div class="d-flex flex-row justify-content-start pt-5 pb-2 ms-4">
+              <div>
+                <i class="fa-solid fa-calendar-check fa-xl text-light"></i>
+              </div>
+              <div class="ms-2">
+                <small class="text-light col mb-date-custom1"
+                  >Aujourd'hui</small
+                >
+              </div>
+            </div>
+
+            <div class="d-flex flex-row justify-content-start pt-5 pb-2">
+              <div>
+                <i class="fa-solid fa-calendar-plus fa-xl text-light"></i>
+              </div>
+              <div class="ms-2">
+                <small class="text-light col mb-date-custom1">demain</small>
+              </div>
+            </div>
+
+            <div class="d-flex flex-row justify-content-start pt-5 pb-2 me-1">
+              <div>
+                <i class="fa-solid fa-calendar-days fa-xl text-light"></i>
+              </div>
+              <div class="ms-2">
+                <small class="text-light col mb-date-custom1">Date...</small>
+              </div>
+            </div>
+          </div>
+          <div class="container-custom-reader ">
+            <div class="d-flex flex-row justify-content-start ">
+              <i class="fa-solid fa-book-open-reader fa-2xl text-light"></i>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
     <div class="container">
-      <p class="title">ToDo List</p>
       <div class="container-form">
         <form action="">
           <input name="input_article" id="input-article" type="text" />
