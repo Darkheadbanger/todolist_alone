@@ -3,7 +3,7 @@ form {
   .input-top {
     &::placeholder {
       color: $placeholder-color;
-    }  
+    }
     &:focus {
       background-color: $search-color-active;
       color: $primary-color;
@@ -20,6 +20,18 @@ form {
         inset -3px -3px 6px rgba(66, 75, 88, 0.9),
         inset 3px 3px 8px rgba(46, 53, 62, 0.9);
     }
+  }
+  .w-custom-description {
+    width: 94% !important;
+  }
+  .m-custom-description {
+    margin: 0 7px 0px 2px; 
+  }
+  .m-custom-quantity {
+    margin: 0px 35px 0 -11px;
+  }
+  .w-custom-quantity {
+    width: 94% !important;
   }
 }
 
