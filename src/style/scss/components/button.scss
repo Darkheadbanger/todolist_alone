@@ -1,32 +1,30 @@
 // Button add
-button {
-  padding: 5px 15px;
-  border: 0px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 0 3px;
-  transition: all 800ms;
-  border-radius: 20px;
-  padding: 5px 20px;
+/* Rectangle 8 */
+/* Rectangle 8 */
+
+// position: absolute;
+// left: 0%;
+// right: 0%;
+// top: 0%;
+// bottom: 0%;
+
+// background: rgba(22, 26, 30, 0.5);
+// mix-blend-mode: overlay;
+// border-radius: 16.0902px;
+
+.btn-add {
+  width: 11rem;
+  margin-left: 6rem;
+  @include button-design;
+  &:hover {
+    @include button-design-hover;
+  }
+  /* active ne fonctionne pas */
+  &:active {
+    @include button-design-active;
+  }
 }
 
-.button {
-  background-color: #fb7b43 !important;
-}
-
-.button:hover {
-  filter: brightness(0.75);
-  transform: translateY(-3px);
-  transition: 500ms;
-  box-shadow: 0 10px 20px #00000033;
-}
-/* active ne fonctionne pas */
-.btn:active {
-  filter: brightness(0.75);
-  bottom: 3px;
-  box-shadow: 0 5px 10px #00000033;
-  transition: 500ms;
-}
 // Button effacer
 .danger {
   background-color: red;

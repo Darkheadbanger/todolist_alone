@@ -1,0 +1,55 @@
+// Breakpoints
+@mixin xsmall {
+  @media screen and (min-width: map-get($grid-breakpoints, xs)) {
+    @content;
+  }
+}
+@mixin small {
+  @media screen and (min-width: map-get($grid-breakpoints, sm)) {
+    @content;
+  }
+}
+@mixin medium {
+  @media screen and (min-width: map-get($grid-breakpoints, md)) {
+    @content;
+  }
+}
+@mixin large {
+  @media screen and (min-width: map-get($grid-breakpoints, lg)) {
+    @content;
+  }
+}
+@mixin xlarge {
+  @media screen and (min-width: map-get($grid-breakpoints, xl)) {
+    @content;
+  }
+}
+@mixin xxlarge {
+  @media screen and (min-width: map-get($grid-breakpoints, xxl)) {
+    @content;
+  }
+}
+@mixin xxxlarge {
+  @media screen and (min-width: map-get($grid-breakpoints, xxxl)) {
+    @content;
+  }
+}
+
+// Bouton
+@mixin button-design {
+  cursor: pointer;
+  transition: all 800ms;
+  // mix-blend-mode: overlay;
+  border-radius: 16.0902px;
+}
+@mixin button-design-hover {
+  filter: $brightness-add;
+  transform: translateY(-3px);
+  transition: $transition-add;
+}
+@mixin button-design-active {
+  filter: $brightness-add;
+  bottom: 3px;
+  box-shadow: 0 5px 10px #00000033;
+  transition: $transition-add;
+}

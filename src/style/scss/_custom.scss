@@ -2,17 +2,19 @@
 @import "./vendors/bootstrap.scss";
 
 @import "./utils/variables.scss";
-@import "./utils/fonctions.scss";
+// @import "./utils/fonctions.scss";
 @import "./utils/mixins.scss";
-@import "./utils/animations.scss";
+// @import "./utils/animations.scss";
 
 @import "./base/fondation.scss";
 @import "./base/typographie.scss";
 
-// @import "./components/buttons";
-// @import "./layouts/header";
+@import "./components/button";
+@import "./components/article";
+
 @import "./layouts/nav.scss";
 
 @import "./pages/form-search.scss";
 @import "./pages/form-add.scss";
+@import "./pages/input-add.scss";
 // @import "./style/scss/_custom.css";

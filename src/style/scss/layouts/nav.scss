@@ -1,58 +1,68 @@
 .navbar {
+  .col-first-custom {
+    flex: 0 0 auto;
+    width: 63.667%;
+  }
+  .col-heure-custom {
+    flex: 0 0 auto;
+    width: 0.667%;
+  }
+  .col-custom-logo {
+    flex: 0 0 auto;
+    width: 3.667%;
+  }
+  .mt-custom-logo {
+    margin-top: 0.7rem !important;
+  }
   &__coulour {
     background: $navbar-color;
     mix-blend-mode: hard-light;
     box-shadow: $navbar-shadow;
   }
-  .ms-title-custom {
-    margin: 0px 0px 0px -8px;
+  .m-title-custom {
+    margin: -1.2rem 0 0 0 !important;
   }
-  .search-bar {
-    &__position {
-      margin: 8px 0px 0px 9.5rem;
+  .text-date {
+    &__spacing {
+      margin: 0px 0px -10px -12px;
     }
-    .text-date {
-      &__spacing {
-        margin: -7px 0px -4px 16px;
-      }
-    }
-    .search-icon {
-      &__position {
-        margin: 8px 0px 0px 9.5rem;
-      }
-    }
-    .search-icon1 {
-      &__position {
-        margin: 8px 0px 0px 22.5rem;
-      }
+  }
+  .text-heure {
+    &__spacing {
+      margin: 0 0 0 10px;
     }
   }
 }
 
 .navbar-left {
-  position: fixed;
-  min-width: 7rem;
-  width: 5.5rem;
-  top: 0%;
-  bottom: 0%;
   &--colour {
     background: $navbar-color;
     mix-blend-mode: hard-light;
     box-shadow: $navbar-shadow;
   }
-  .container-custom-reader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 14rem 5px 0 0;
+
+  .p-custom-read {
+    //1280px
+    padding: 115% 0 0 0;
+
+    @include xlarge {
+      padding: 170% 0 0 0;
+    }
+    // 1440px
+    @include xxlarge {
+      padding: 120% 0 0 0;
+    }
+
   }
-}
+  .mb-date-custom1 {
+    margin: 0 26px 0 0;
+  }
 
-.mb-date-custom1 {
-  margin: 0 26px 0 0;
-}
+  .mb-date-custom3 {
+    margin: 0px 2px 0px 0;
+  }
 
-.mb-date-custom3 {
-  margin: 0px 2px 0px 0;
+  .mt-custom-date {
+    margin-top: 5rem !important;
+  }
 }
