@@ -1,5 +1,9 @@
 // Input pour chercher
-form {
+.form-add {
+  @include medium {
+    padding: 50px 0rem 0 2rem;
+  }
+
   .input-top {
     &::placeholder {
       color: $placeholder-color;

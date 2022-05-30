@@ -20,9 +20,23 @@ section {
     }
   }
   .m-custom-input {
-    margin: 0 0 0 20rem;
+    @include large {
+      margin: 0 0 0 20rem;
+    }
+
+    @include medium {
+      margin: 0 0 0 10.583rem;
+    }
   }
   .m-custom-read {
-    margin: 5.35rem 0px 0px -5rem;
+    @include xxlarge {
+      padding: 0 0 0 15rem;
+    }
+    @include xlarge {
+      padding: 0rem 0 0 12rem;
+    }
+    @include large {
+      padding: 5rem 0 0 0;
+    }
   }
 }

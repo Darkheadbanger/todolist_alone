@@ -7,6 +7,11 @@ $placeholder-color: white;
 $navbar-color: #171f2a;
 $navbar-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+// Article
+$article-holder-color: #38404b;
+$rounded-todo-color: 2.5px solid #94adcf;
+$bottom-separator-color: #586085;
+$bottom-separator: 1px solid $bottom-separator-color;
 // Breakpoints
 $grid-breakpoints: (
   xs: 0,

@@ -1,18 +1,50 @@
-ul {
-  list-style-type: none;
-  li {
-    background: blue;
-    width: 15rem;
-    height: auto;
-  } 
+.ps-custom-container-article {
+  padding: 0 8rem 0 22rem;
+
+  .card {
+    &__element {
+      @include article-holder-box-shadow;
+      border-bottom: $bottom-separator !important;
+    }
+
+    &--modifier {
+      background-color: $article-holder-color !important;
+    }
+  }
+  .card-body {
+    &__element {
+      border-bottom: $bottom-separator !important;
+    }
+  }
+  .card-header {
+    &--modifier {
+      background-color: $article-holder-color !important;
+    }
+    &__element {
+      border-bottom: $bottom-separator !important;
+    }
+  }
+
+  .card-footer {
+    &__element {
+      @include article-holder-box-shadow;
+    }
+    &--modifier {
+      background-color: $article-holder-color !important;
+    }
+  }
+
+  .todo {
+    box-sizing: border-box;
+    border: $rounded-todo-color;
+    border-radius: 16rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .done {
+    background-color: $rounded-todo-color;
+  }
 }
-/* Rectangle 4 */
 
-// position: absolute;
-// left: 0%;
-// right: 0%;
-// top: 0%;
-// bottom: 0%;
-
-// background: #38404B;
-// box-shadow: -5px 5px 10px rgba(48, 54, 64, 0.2), 5px -5px 10px rgba(48, 54, 64, 0.2), -5px -5px 10px rgba(64, 74, 86, 0.9), 5px 5px 13px rgba(48, 54, 64, 0.9), inset 1px 1px 2px rgba(64, 74, 86, 0.3), inset -1px -1px 2px rgba(48, 54, 64, 0.5);
+/* article holder */
+/* Rond */

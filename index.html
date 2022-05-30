@@ -1,311 +1,309 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-    <title>ToDoList</title>
-  </head>
-  <body>
-    <header>
-      <nav
-        class="fixed-top navbar-expand-md navbar-dark navbar navbar__coulour d-none d-lg-block"
-      >
-        <div class="container p-0 ms-5">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-first-custom">
-                <div class="row bd-highlight mt-custom-logo">
-                  <div class="p2 bd-highlight me-2 col-custom-logo">
-                    <i class="fa-solid fa-list-check text-light fa-2xl"></i>
-                  </div>
-                  <div class="p2 align-self-center bd-highlight col">
-                    <a href="#" class="navbar-brand text-brand"
-                      ><h1 class="h5">Do The Day</h1></a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col-4 search-bar search-bar__position">
-                <form action="" class="form-inline my-2 col-xs">
-                  <div
-                    class="d-flex flex-row align-items-center overflow-hidden"
-                  >
-                    <input
-                      type="text"
-                      class="form-control mr-sm-1 border border-dark rounded input-top input-top__shadow input-top--bg-color"
-                      autocomplete="search-keyword-suggestions"
-                      maxlength="500"
-                      aria-hidden="true"
-                      value=""
-                      placeholder="Chercher un article..."
-                    />
-                    <i class="fa-solid fa-magnifying-glass text-light"></i>
-                  </div>
-
-                  <div
-                    class="d-flex flex-row align-items-center overflow-hidden"
-                  >
-                    <input
-                      type="text"
-                      class="form-control mr-sm-1 border border-dark rounded input-top input-top__shadow input-top--bg-color"
-                      autocomplete="search-keyword-suggestions"
-                      maxlength="500"
-                      aria-hidden="true"
-                      value=""
-                      placeholder="Catégorie"
-                    />
-                    <i class="fa-solid fa-angle-down text-light"></i>
-                  </div>
-                </form>
-              </div>
-              <div class="col-heure-custom">
-                <p href="#" class="navbar-brand text-date text-date__spacing">
-                  20/05/2022
-                </p>
-                <p href="#" class="navbar-brand text-heure text-heure__spacing">
-                  10H00
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <nav
-        class="navbar-left navbar-left--colour position-fixed h-100 top-0 start-0 d-none d-lg-block"
-      >
-        <div class="container row justify-content-center py-5 px-5">
-          <div class="row mt-custom-date">
-            <div class="col-2">
-              <i class="fa-solid fa-calendar-check fa-xl text-light"></i>
-            </div>
-            <div class="col-2 ms-2">
-              <small class="text-light col mb-date-custom1">Aujourd'hui</small>
-            </div>
-          </div>
-
-          <div class="row pt-4">
-            <div class="col-2">
-              <i class="fa-solid fa-calendar-plus fa-xl text-light"></i>
-            </div>
-            <div class="col-2 ms-2">
-              <small class="text-light col mb-date-custom1">demain</small>
-            </div>
-          </div>
-
-          <div class="row pt-4">
-            <div class="col-2">
-              <i class="fa-solid fa-calendar-days fa-xl text-light"></i>
-            </div>
-            <div class="col-2 ms-2">
-              <small class="text-light col mb-date-custom1">Date...</small>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col d-flex justify-content-center">
-            <i
-              class="fa-solid fa-book-open-reader fa-2xl text-light p-custom-read"
-            ></i>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-    <section>
-      <div class="row justify-content-md-center mt-5">
-        <div class="col-8 m-custom-input">
-          <form class="container" action="">
-            <div
-              class="row row-cols-auto justify-content-center ms-custom-first-inut"
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+         />
+      <title>ToDoList</title>
+   </head>
+   <body>
+      <header>
+         <nav
+            class="fixed-top navbar-expand-md navbar-dark navbar navbar__coulour d-none d-lg-block"
             >
-              <div class="col">
-                <div
-                  class="d-flex flex-row align-items-center overflow-hidden w-custom-left"
-                >
-                  <input
-                    type="text"
-                    class="form-control border w-100 border-dark rounded input-top input-top__shadow input-top--bg-color"
-                    autocomplete="search-keyword-suggestions"
-                    maxlength="500"
-                    aria-hidden="true"
-                    value=""
-                    placeholder="Un article ou une tâche..."
-                  />
-                  <i class="fa-solid fa-angle-right text-light arrow-left"></i>
-                </div>
-              </div>
-              <div class="col">
-                <div
-                  class="d-flex flex-row align-items-center overflow-hidden w-custom-description"
-                >
-                  <input
-                    type="text"
-                    class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
-                    autocomplete="search-keyword-suggestions"
-                    maxlength="500"
-                    aria-hidden="true"
-                    value=""
-                    placeholder="Description..."
-                  /><i
-                    class="fa-solid fa-angle-right text-light arrow-right"
-                  ></i>
-                </div>
-              </div>
-            </div>
-            <div class="row mt-3 align-self-center">
-              <div class="col ms-4">
-                <div
-                  class="d-flex flex-row align-items-center overflow-hidden w-custom-left"
-                >
-                  <input
-                    type="text"
-                    class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
-                    autocomplete="search-keyword-suggestions"
-                    maxlength="500"
-                    aria-hidden="true"
-                    value=""
-                    placeholder="Catégorie..."
-                  /><i
-                    class="fa-solid fa-angle-right text-light arrow-left"
-                  ></i>
-                </div>
-              </div>
-              <div class="col">
-                <div
-                  class="d-flex flex-row align-items-center overflow-hidden w-custom-quantity"
-                >
-                  <input
-                    type="text"
-                    class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
-                    autocomplete="search-keyword-suggestions"
-                    maxlength="500"
-                    aria-hidden="true"
-                    value=""
-                    placeholder="Quantité..."
-                  /><i
-                    class="fa-solid fa-angle-right text-light arrow-right"
-                  ></i>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <button type="button" class="btn btn-dark mt-3 btn-add">
-                Ajouter
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="col-2 m-custom-read">
-          <i class="fa-solid fa-book-open-reader fa-2xl text-light"></i>
-        </div>
-      </div>
-
-      <!-- artciles -->
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-6 mb-4">
-            <div class="card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                      alt=""
-                      style="width: 45px; height: 45px"
-                      class="rounded-circle"
-                    />
-                    <div class="ms-3">
-                      <p class="fw-bold mb-1">John Doe</p>
-                      <p class="text-muted mb-0">john.doe@gmail.com</p>
-                    </div>
+            <div class="container p-0 ms-5">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-first-custom">
+                        <div class="row bd-highlight mt-3">
+                           <div class="p2 bd-highlight me-2 col-custom-logo">
+                              <i class="fa-solid fa-list-check text-light fa-2xl"></i>
+                           </div>
+                           <div class="p2 align-self-center bd-highlight col">
+                              <a href="#" class="navbar-brand text-brand"
+                                 >
+                                 <h1 class="h5">Do The Day</h1>
+                              </a
+                                 >
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-4 search-bar search-bar__position">
+                        <form action="" class="form-inline mt-3 col-xs m-custom-form">
+                           <div
+                              class="d-flex flex-row align-items-center overflow-hidden"
+                              >
+                              <input
+                                 type="text"
+                                 class="form-control mr-sm-1 border border-dark rounded input-top input-top__shadow input-top--bg-color"
+                                 autocomplete="search-keyword-suggestions"
+                                 maxlength="500"
+                                 aria-hidden="true"
+                                 value=""
+                                 placeholder="Chercher un article..."
+                                 />
+                              <i class="fa-solid fa-magnifying-glass text-light"></i>
+                           </div>
+                           <div
+                              class="d-flex flex-row align-items-center overflow-hidden"
+                              >
+                              <input
+                                 type="text"
+                                 class="form-control mr-sm-1 border border-dark rounded input-top input-top__shadow input-top--bg-color"
+                                 autocomplete="search-keyword-suggestions"
+                                 maxlength="500"
+                                 aria-hidden="true"
+                                 value=""
+                                 placeholder="Catégorie"
+                                 />
+                              <i class="fa-solid fa-angle-down text-light"></i>
+                           </div>
+                        </form>
+                     </div>
+                     <div class="col-heure-custom">
+                        <p href="#" class="navbar-brand text-date text-date__spacing">
+                           20/05/2022
+                        </p>
+                        <p href="#" class="navbar-brand text-heure text-heure__spacing">
+                           10H00
+                        </p>
+                     </div>
                   </div>
-                  <span class="badge rounded-pill badge-success">Active</span>
-                </div>
-              </div>
-              <div
-                class="card-footer border-0 bg-light p-2 d-flex justify-content-around"
-              >
-                <a
-                  class="btn btn-link m-0 text-reset"
-                  href="#"
-                  role="button"
-                  data-ripple-color="primary"
-                  >Message<i class="fas fa-envelope ms-2"></i
-                ></a>
-                <a
-                  class="btn btn-link m-0 text-reset"
-                  href="#"
-                  role="button"
-                  data-ripple-color="primary"
-                  >Call<i class="fas fa-phone ms-2"></i
-                ></a>
-              </div>
+               </div>
             </div>
-          </div>
-          <div class="col-6 mb-4">
-            <div class="card">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="https://mdbootstrap.com/img/new/avatars/6.jpg"
-                      alt=""
-                      style="width: 45px; height: 45px"
-                      class="rounded-circle"
-                    />
-                    <div class="ms-3">
-                      <p class="fw-bold mb-1">Alex Ray</p>
-                      <p class="text-muted mb-0">alex.ray@gmail.com</p>
-                    </div>
+         </nav>
+         <nav
+            class="navbar-left navbar-left--colour position-fixed h-100 top-0 start-0 d-none d-lg-block"
+            >
+            <div class="container row justify-content-center py-5 px-5">
+               <div class="row mt-custom-date">
+                  <div class="col-2">
+                     <i class="fa-solid fa-calendar-check fa-xl text-light"></i>
                   </div>
-                  <span class="badge rounded-pill badge-primary"
-                    >Onboarding</span
-                  >
-                </div>
-              </div>
-              <div
-                class="card-footer border-0 bg-light p-2 d-flex justify-content-around"
-              >
-                <a
-                  class="btn btn-link m-0 text-reset"
-                  href="#"
-                  role="button"
-                  data-ripple-color="primary"
-                  >Message<i class="fas fa-envelope ms-2"></i
-                ></a>
-                <a
-                  class="btn btn-link m-0 text-reset"
-                  href="#"
-                  role="button"
-                  data-ripple-color="primary"
-                  >Call<i class="fas fa-phone ms-2"></i
-                ></a>
-              </div>
+                  <div class="col-2 ms-2">
+                     <small class="text-light col mb-date-custom1">Aujourd'hui</small>
+                  </div>
+               </div>
+               <div class="row pt-4">
+                  <div class="col-2">
+                     <i class="fa-solid fa-calendar-plus fa-xl text-light"></i>
+                  </div>
+                  <div class="col-2 ms-2">
+                     <small class="text-light col mb-date-custom1">demain</small>
+                  </div>
+               </div>
+               <div class="row pt-4">
+                  <div class="col-2">
+                     <i class="fa-solid fa-calendar-days fa-xl text-light"></i>
+                  </div>
+                  <div class="col-2 ms-2">
+                     <small class="text-light col mb-date-custom1">Date...</small>
+                  </div>
+               </div>
             </div>
-          </div>
-          </div>
-        </div>
-  
-      </div>
-
-      <!-- Article -->
-      
-      <!-- <ul>
-        <li>
-          <div>
-            <span class="todo done"></span>
-            <p>Text</p>
-            <button>Editer</button>
-            <button>Supprimer</button>
-          </div>
-        </li>
-      </ul> -->
-    </section>
-    <footer></footer>
-  </body>
+            <div class="row">
+               <div class="col d-flex justify-content-center">
+                  <i
+                     class="fa-solid fa-book-open-reader fa-2xl text-light p-custom-read"
+                     ></i>
+               </div>
+            </div>
+         </nav>
+      </header>
+      <section>
+         <div class="row justify-content-md-center mt-5 py-4">
+            <div class="col-8 m-custom-input">
+               <form class="container form-add" action="">
+                  <div
+                     class="row row-cols-auto justify-content-center ms-custom-first-inut"
+                     >
+                     <div class="col">
+                        <div
+                           class="d-flex flex-row align-items-center overflow-hidden w-custom-left"
+                           >
+                           <input
+                              type="text"
+                              class="form-control border w-100 border-dark rounded input-top input-top__shadow input-top--bg-color"
+                              autocomplete="search-keyword-suggestions"
+                              maxlength="500"
+                              aria-hidden="true"
+                              value=""
+                              placeholder="Un article ou une tâche..."
+                              />
+                           <i class="fa-solid fa-angle-right text-light arrow-left"></i>
+                        </div>
+                     </div>
+                     <div class="col">
+                        <div
+                           class="d-flex flex-row align-items-center overflow-hidden w-custom-description"
+                           >
+                           <input
+                              type="text"
+                              class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
+                              autocomplete="search-keyword-suggestions"
+                              maxlength="500"
+                              aria-hidden="true"
+                              value=""
+                              placeholder="Description..."
+                              /><i
+                              class="fa-solid fa-angle-right text-light arrow-right"
+                              ></i>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row mt-3 align-self-center">
+                     <div class="col ms-4">
+                        <div
+                           class="d-flex flex-row align-items-center overflow-hidden w-custom-left"
+                           >
+                           <input
+                              type="text"
+                              class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
+                              autocomplete="search-keyword-suggestions"
+                              maxlength="500"
+                              aria-hidden="true"
+                              value=""
+                              placeholder="Catégorie..."
+                              /><i
+                              class="fa-solid fa-angle-right text-light arrow-left"
+                              ></i>
+                        </div>
+                     </div>
+                     <div class="col">
+                        <div
+                           class="d-flex flex-row align-items-center overflow-hidden w-custom-quantity"
+                           >
+                           <input
+                              type="text"
+                              class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
+                              autocomplete="search-keyword-suggestions"
+                              maxlength="500"
+                              aria-hidden="true"
+                              value=""
+                              placeholder="Quantité..."
+                              /><i
+                              class="fa-solid fa-angle-right text-light arrow-right"
+                              ></i>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col">
+                     <button type="button" class="btn btn-dark mt-3 btn-add">
+                     Ajouter
+                     </button>
+                  </div>
+               </form>
+            </div>
+            <div class="col-2 m-custom-read">
+               <i class="fa-solid fa-book-open-reader fa-2xl text-light"></i>
+            </div>
+         </div>
+         <!-- Read a droite, 5.2 > 1400 et < 1200 margin: 5.35rem 0px 0px -7.25rem; -->
+         <!-- artciles   -->
+         <div class="row row row-cols-1 row-cols-xl-2 g-4 ps-custom-container-article pt-5 mt-3">
+            <div class="col mb-4 pe-4">
+               <div class="card card__element card--modifier rounded">
+                  <div class="card-header card-header__element card-header--modifier">
+                     <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                           <span class="todo done"></span>
+                           <div class="ms-3">
+                              <p class="fw-bold mb-1">John Doe</p>
+                              <p class="text-muted mb-0">john.doe@gmail.com</p>
+                           </div>
+                        </div>
+                        <span class="badge rounded-pill badge-success">Active</span>
+                     </div>
+                  </div>
+                  <div class="card-body card-body__element">
+                     <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                           <span class="todo done"></span>
+                           <div class="ms-3">
+                              <p class="fw-bold mb-1">John Doe</p>
+                              <p class="text-muted mb-0">john.doe@gmail.com</p>
+                           </div>
+                        </div>
+                        <span class="badge rounded-pill badge-success">Active</span>
+                     </div>
+                  </div>
+                  <div
+                     class="card-footer card-footer____element card-footer--modifier border-0 bg-light"
+                     >
+                     <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                           <span class="todo done"></span>
+                           <div class="ms-3">
+                              <p class="fw-bold mb-1">John Doe</p>
+                              <p class="text-muted mb-0">john.doe@gmail.com</p>
+                           </div>
+                        </div>
+                        <span class="badge rounded-pill badge-success">Active</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col mb-4 pe-4">
+               <div class="card card__element card--modifier rounded">
+                  <div class="card-header card-header__element card-header--modifier">
+                     <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                           <span class="todo done"></span>
+                           <div class="ms-3">
+                              <p class="fw-bold mb-1">John Doe</p>
+                              <p class="text-muted mb-0">john.doe@gmail.com</p>
+                           </div>
+                        </div>
+                        <span class="badge rounded-pill badge-success">Active</span>
+                     </div>
+                  </div>
+                  <div class="card-body card-body__element">
+                     <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                           <span class="todo done"></span>
+                           <div class="ms-3">
+                              <p class="fw-bold mb-1">John Doe</p>
+                              <p class="text-muted mb-0">john.doe@gmail.com</p>
+                           </div>
+                        </div>
+                        <span class="badge rounded-pill badge-success">Active</span>
+                     </div>
+                  </div>
+                  <div
+                     class="card-footer card-footer____element card-footer--modifier border-0 bg-light"
+                     >
+                     <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                           <span class="todo done"></span>
+                           <div class="ms-3">
+                              <p class="fw-bold mb-1">John Doe</p>
+                              <p class="text-muted mb-0">john.doe@gmail.com</p>
+                           </div>
+                        </div>
+                        <span class="badge rounded-pill badge-success">Active</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         </div>
+         <!-- Article -->
+         <!-- <ul>
+            <li>
+              <div>
+                <span class="todo done"></span>
+                <p>Text</p>
+                <button>Editer</button>
+                <button>Supprimer</button>
+              </div>
+            </li>
+            </ul> -->
+      </section>
+      <footer></footer>
+   </body>
 </html>
+
