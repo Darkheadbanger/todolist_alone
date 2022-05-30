@@ -44,6 +44,35 @@
   .done {
     background-color: $rounded-todo-color;
   }
+
+  .mt-custom-title {
+    margin: 1.25rem 0 0 0px;
+  }
+  .text-custom-title {
+    color: $text-color-title;
+  }
+  .h-custom-date {
+    height: 0.8rem;
+  }
+  .ms-custom-date {
+    margin-left: 11rem;
+  }
+  .ms-custom-categorie {
+    margin-left: 2.5rem;
+  }
+  .ms-custom-modification {
+    margin-left: 13.3rem;
+  }
+  .mr-custom-modification-last-child {
+    margin-right: -11.05rem;
+  }
+  .ms-custom-delete-last-child {
+    margin-left: 11.8rem;
+  }
+
+  .w-custom-categroeie {
+    width: 10rem;
+  }
 }
 
 /* article holder */
