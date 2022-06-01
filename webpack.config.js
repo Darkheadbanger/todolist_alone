@@ -44,7 +44,7 @@ module.exports = {
           filename: "compiled/fonts/[hash][ext][query]",
         },
       },
-    ],
+    ], 
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -60,3 +60,4 @@ module.exports = {
     port: 3000,
   },
 };
+// entries
