@@ -24,8 +24,18 @@
     @content;
   }
 }
+@mixin xlarge1249 {
+  @media screen and (min-width: map-get($grid-breakpoints, x1249)) {
+    @content;
+  }
+}
 @mixin xxlarge {
   @media screen and (min-width: map-get($grid-breakpoints, xxl)) {
+    @content;
+  }
+}
+@mixin xxxlarge {
+  @media screen and (min-width: map-get($grid-breakpoints, xxxl)) {
     @content;
   }
 }

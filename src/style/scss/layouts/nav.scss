@@ -49,7 +49,6 @@
     @include xxlarge {
       padding: 120% 0 0 0;
     }
-
   }
   .mb-date-custom1 {
     margin: 0 26px 0 0;
@@ -61,5 +60,11 @@
 
   .mt-custom-date {
     margin-top: 5rem !important;
+  }
+}
+
+.w-custom-nav {
+  @include medium {
+    width: 14rem;
   }
 }

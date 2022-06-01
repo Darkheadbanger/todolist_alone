@@ -1,11 +1,6 @@
 // Input pour chercher
 
 form {
-  i {
-    position: absolute;
-    margin: 10.5%;
-  }
-
   .input-top {
     &::placeholder {
       color: $placeholder-color;
@@ -27,81 +22,47 @@ form {
         inset 3px 3px 8px rgba(46, 53, 62, 0.9);
     }
   }
+  i {
+    position: absolute;
+    margin: 10.5%;
+  }
+  .mt-custom-search-input {
+    margin-top: -1.7rem;
+  }
+  .ms-custom-search-input {
+    margin-left: 11rem;
+  }
 }
 
-// /* Chercher Article */
-// form {
-//   .font-search {
-//     position: absolute;
-//     // width: 260px;
-//     // height: 46px;
-//     // left: 647px;
-//     // top: 6px;
-//     input {
-//       /* search 2 */
-//       position: absolute;
-//       // left: 0%;
-//       // right: 0%;
-//       // top: 0%;
-//       // bottom: 0%;
+.ms-custom-search {
+  @include xlarge {
+    margin-left: -9rem;
+  }
+  @include xxlarge {
+    margin-left: -3rem;
+  }
+}
 
-//       background: #38404b;
-//       box-shadow: 1px 1px 2px rgba(66, 75, 88, 0.3),
-//         -1px -1px 2px rgba(46, 53, 62, 0.5),
-//         inset -3px 3px 6px rgba(46, 53, 62, 0.2),
-//         inset 3px -3px 6px rgba(46, 53, 62, 0.2),
-//         inset -3px -3px 6px rgba(66, 75, 88, 0.9),
-//         inset 3px 3px 8px rgba(46, 53, 62, 0.9);
-//       border-radius: 16px;
-//       &::placeholder {
-//         color: $placeholder-color;
-//       }
-//     }
-//     i {
-//       /* loop logo */
+.w-custom-search {
+  @include xlarge {
+    width: 40%;
+  }
+  @include xxlarge {
+    width: 34%;
+  }
+}
 
-//       position: absolute;
-//       // left: 85.77%;
-//       // right: 4.62%;
-//       // top: 23.91%;
-//       // bottom: 21.73%;
-//     }
-//   }
-//     .font-search {
-//     position: absolute;
-//     // width: 260px;
-//     // height: 46px;
-//     // left: 647px;
-//     // top: 6px;
-//     input {
-//       /* search 2 */
-//       position: absolute;
-//       // left: 0%;
-//       // right: 0%;
-//       // top: 0%;
-//       // bottom: 0%;
-
-//       background: #38404b;
-//       box-shadow: 1px 1px 2px rgba(66, 75, 88, 0.3),
-//         -1px -1px 2px rgba(46, 53, 62, 0.5),
-//         inset -3px 3px 6px rgba(46, 53, 62, 0.2),
-//         inset 3px -3px 6px rgba(46, 53, 62, 0.2),
-//         inset -3px -3px 6px rgba(66, 75, 88, 0.9),
-//         inset 3px 3px 8px rgba(46, 53, 62, 0.9);
-//       border-radius: 16px;
-//       &::placeholder {
-//         color: $placeholder-color;
-//       }
-//     }
-//     i {
-//       /* loop logo */
-
-//       position: absolute;
-//       // left: 85.77%;
-//       // right: 4.62%;
-//       // top: 23.91%;
-//       // bottom: 21.73%;
-//     }
-//   }
-
-// }
+.ms-custom-search {
+  @include medium {
+    margin-left: -16rem;
+  }
+  @include large {
+    margin-left: -16rem;
+  }
+  @include xlarge {
+    margin-left: -9rem;
+  }
+  @include xxlarge {
+    margin-left: -3rem;
+  }
+}

@@ -57,6 +57,17 @@
   .ms-custom-date {
     margin-left: 11rem;
   }
+  .mt-custom-date {
+    @include xlarge1249 {
+      margin-top: -3rem;
+    }
+    @include xxlarge {
+      margin-top: -2.8rem;
+    }
+    @include xxxlarge {
+      margin-top: 0rem;
+    }
+  }
   .ms-custom-categorie {
     margin-left: 2.5rem;
   }
