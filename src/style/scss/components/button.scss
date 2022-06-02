@@ -1,20 +1,9 @@
-// Button add
-/* Rectangle 8 */
-/* Rectangle 8 */
-
-// position: absolute;
-// left: 0%;
-// right: 0%;
-// top: 0%;
-// bottom: 0%;
-
-// background: rgba(22, 26, 30, 0.5);
-// mix-blend-mode: overlay;
-// border-radius: 16.0902px;
-
 .btn-add {
-  width: 11rem;
-  margin-left: 6rem;
+  width: 21rem;
+  @include large {
+    width: 11rem;
+    margin-left: 6rem;
+  }
   @include button-design;
   &:hover {
     @include button-design-hover;

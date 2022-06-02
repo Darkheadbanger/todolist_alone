@@ -2,10 +2,10 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: {
-    app: path.join(__dirname, "src/index.js"),
+    app: path.resolve(__dirname, "src/index.js"),
   },
   output: {
-    path: path.join(__dirname, "dist"),
+    path: path.resolve(__dirname, "dist"),
     filename: "[name].bundle.js",
   },
   module: {
@@ -44,13 +44,19 @@ module.exports = {
           filename: "compiled/fonts/[hash][ext][query]",
         },
       },
-    ], 
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "/index.html"),
+      filename: "index.html",
+      template: path.resolve(__dirname, "/index.html"),
+    }),
+    new HtmlWebpackPlugin({
+      filename: "detail.html",
+      template: path.resolve(__dirname, "/detail.html"),
     }),
   ],
+
   stats: "minimal",
   devtool: "source-map",
   mode: "development",
@@ -60,4 +66,4 @@ module.exports = {
     port: 3000,
   },
 };
-// entries
+// entr

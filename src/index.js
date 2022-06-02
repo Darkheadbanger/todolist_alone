@@ -1,7 +1,7 @@
 import "./style/scss/_custom.scss";
 import "./style/scss/_custom.css";
-
 import "./todo.js";
+// import html from "../detail.html";
 
 import { ToDoList } from "./todo.js";
 // You can specify which plugins you need
