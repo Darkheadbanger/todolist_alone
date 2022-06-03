@@ -49,11 +49,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: path.resolve(__dirname, "/index.html"),
+      template: path.resolve(__dirname, "./index.html"),
     }),
     new HtmlWebpackPlugin({
       filename: "detail.html",
-      template: path.resolve(__dirname, "/detail.html"),
+      template: path.resolve(__dirname, "./detail.html"),
     }),
   ],
 
