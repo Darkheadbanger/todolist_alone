@@ -115,10 +115,35 @@
          </nav>
       </header>
       <section>
-         <!-- Scroll add -->
+         <!-- Scroll add d-none pour le cacher pour l'instant -->
       <div
-         class="scroll-right scroll-right--colour position-fixed h-100 top-0 start-0 end-0 bottom-0 d-block d-lg-none w-custom-nav z-index-scroll"
+         class="scroll-right scroll-right--colour position-fixed h-100 top-0 start-0 end-0 bottom-0 d-none d-lg-none w-custom-nav z-index-scroll"
          >
+         <nav
+         class="fixed-top navbar-expand-md navbar-dark  d-block d-lg-none"
+         >
+            <div class="container-fluid nav-scroll">
+               <div class="row">
+                  <div class="col-8">
+                     <div class="row bd-highlight mt-3">
+                        <div class="p2 bd-highlight col-custom-logo-scroll">
+                           <i class="fa-solid fa-list-check text-light fa-2xl"></i>
+                        </div>
+                        <div class="p2 align-self-center bd-highlight col-2">
+                           <a href="#" class="navbar-brand text-brand"
+                              >
+                              <h1 class="h5">Do The Day</h1>
+                           </a
+                              >
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col">
+                     <i class="fa-solid fa-magnifying-glass fa-xl text-light mt-custom-loop ms-custom-loop"></i>
+                  </div>
+               </div>
+         </div>
+      </nav>
          <div class="row justify-content-center mt-5 py-4 d-block d-lg-none">
             <div class="col">
                <form class="container" action="">
@@ -204,9 +229,6 @@
                   </div>
                </form>
             </div>
-            <div class="col-2 m-custom-read d-none d-lg-block">
-               <i class="fa-solid fa-book-open-reader fa-2xl text-light"></i>
-            </div>
          </div>
          <div class="row justify-content-end">
             <div class="col w-100 h-auto">
@@ -217,6 +239,96 @@
          </div>
       </div>
       <!-- Fin scroll add -->
+
+         <!-- Scroll search -->
+      <div
+         class="scroll-right scroll-right--colour position-fixed h-100 top-0 start-0 end-0 bottom-0 d-block d-lg-none w-custom-nav z-index-scroll"
+         >
+         <nav
+         class="fixed-top navbar-expand-md navbar-dark  d-block d-lg-none"
+         >
+            <div class="container-fluid nav-scroll">
+               <div class="row">
+                  <div class="col-8">
+                     <div class="row bd-highlight mt-3">
+                        <div class="p2 bd-highlight col-custom-logo-scroll">
+                           <i class="fa-solid fa-list-check text-light fa-2xl"></i>
+                        </div>
+                        <div class="p2 align-self-center bd-highlight col-2">
+                           <a href="#" class="navbar-brand text-brand"
+                              >
+                              <h1 class="h5">Do The Day</h1>
+                           </a
+                              >
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col">
+                     <i class="fa-solid fa-magnifying-glass fa-xl text-light mt-custom-loop ms-custom-loop"></i>
+                  </div>
+               </div>
+         </div>
+      </nav>
+         <div class="row justify-content-center mt-5 py-4 d-block d-lg-none">
+            <div class="col">
+               <form class="container" action="">
+                  <div
+                     class="row row-cols-auto justify-content-center"
+                     >
+                     <div class="col mb-4">
+                        <div
+                           class="d-flex flex-row align-items-center overflow-hidden w-custom-left"
+                           >
+                           <input
+                              type="text"
+                              class="form-control border w-100 border-dark rounded input-top input-top__shadow input-top--bg-color"
+                              autocomplete="search-keyword-suggestions"
+                              maxlength="500"
+                              aria-hidden="true"
+                              value=""
+                              placeholder="Catégorie..."
+                              />
+                           <i class="fa-solid fa-angle-right text-light arrow-left"></i>
+                        </div>
+                     </div>
+                     <div class="col mb-2">
+                        <div
+                           class="d-flex flex-row align-items-center overflow-hidden w-custom-description"
+                           >
+                           <input
+                              type="text"
+                              class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
+                              autocomplete="search-keyword-suggestions"
+                              maxlength="500"
+                              aria-hidden="true"
+                              value=""
+                              placeholder="Chercher un artcile ou une activité..."
+                              /><i
+                              class="fa-solid fa-angle-right text-light arrow-right"
+                              ></i>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row row-cols-auto justify-content-center ">
+                     <div class="col mx-sm-5 mx-custom-md-add">
+                        <button type="button" class="btn btn-dark mt-3 btn-add">
+                        Ajouter
+                        </button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <div class="row justify-content-end">
+            <div class="col w-100 h-auto">
+               <span class="round-button rounded-circle position-absolute top-custom-round end-custom-round w-custom-rounded h-custom-rounded">
+                  <i class="fa-solid fa-minus text-light fa-xl mt-custom-plus ml-custom-plus"></i>
+               </span>
+            </div>
+         </div>
+      </div>
+      <!-- Fin scroll search -->
+
          <div class="row justify-content-center mt-5 py-4 d-none d-lg-block ">
             <div class="col-8 m-custom-input">
                <form class="container form-add" action="">
