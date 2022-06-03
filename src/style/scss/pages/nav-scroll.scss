@@ -1,0 +1,16 @@
+.nav-scroll {
+  .col-custom-logo-scroll {
+    flex: 0 0 auto;
+    width: 12.667%;
+  }
+  .mt-custom-loop {
+    @include small {
+      margin-top: 2rem;
+    }
+  }
+  .ms-custom-loop {
+    @include small {
+      margin-left: 7rem;
+    }
+  }
+}
