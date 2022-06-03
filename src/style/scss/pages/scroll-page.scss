@@ -1,0 +1,11 @@
+.scroll-right {
+  &--colour {
+    background-color: red;
+    // background-color: $background-scroll;
+  }
+}
+
+.z-index-scroll {
+  z-index: 1000;
+}
+
