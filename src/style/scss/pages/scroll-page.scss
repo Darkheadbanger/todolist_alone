@@ -1,11 +1,33 @@
 .scroll-right {
   &--colour {
-    background-color: red;
+    background-color: $background-scroll;
     // background-color: $background-scroll;
   }
+  .top-custom-round {
+    top: 40rem;
+  }
+  .end-custom-round {
+    right: 3rem;
+  }
+  .w-custom-rounded {
+    width: 3rem;
+  }
+  .h-custom-rounded {
+    height: 3rem;
+  }
 }
-
 .z-index-scroll {
   z-index: 1000;
 }
 
+/* roundbutton */
+.round-button {
+  background: $background-round-botton-color;
+  box-shadow: $background-round-botton-shadow;
+  .mt-custom-plus {
+    margin-top: 1.4rem;
+  }
+  .ml-custom-plus {
+    margin-left: 0.8rem;
+  }
+}
