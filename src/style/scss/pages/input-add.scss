@@ -1,35 +1,61 @@
 section {
   form {
     .w-custom-left {
-      width: 24rem;
+      width: 34rem;
+      @include medium {
+        width: 46rem;
+      }
+
       @include large {
         width: 22rem;
       }
     }
     .w-custom-description {
-      width: 24rem;
+      width: 34rem;
+      @include medium {
+        width: 46rem;
+      }
       @include large {
         width: 10.6rem;
       }
     }
     .w-custom-quantity {
       width: 24rem;
+      @include small {
+        width: 34rem;
+      }
+      @include medium {
+        width: 46rem;
+      }
       @include large {
         width: 10.6rem;
       }
     }
     .arrow-right {
-      margin: 0 0 0 21.5rem;
+      margin-left: 21.5rem;
+      @include small {
+        margin-left: 31rem;
+      }
+      @include medium {
+        margin-left: 42.5rem;
+      }
+
       @include large {
-        margin: 0 0 0 8rem;
+        margin-left: 8rem;
       }
     }
     .arrow-left {
-      margin: 0 0 0 21.5rem;
-      @include large {
-        margin: 0 0 0 19.5rem;
+      margin-left: 21.5rem;
+      @include small {
+        margin-left: 31rem;
       }
-    } 
+      @include medium {
+        margin-left: 42.5rem;
+      }
+      @include large {
+        margin-left: 19.5rem;
+      }
+    }
     .mx-custom-md-add {
       @include medium {
         margin-right: 12rem !important;
@@ -45,6 +71,15 @@ section {
         margin: 0 0 0 1.65rem;
       }
     }
+
+    .pt-custom-row-button {
+      // 576px
+      padding-top: 5rem;
+    }
+  }
+  .col-custom-input {
+    flex: 0 0 auto;
+    width: 86.667%;
   }
   .m-custom-input {
     @include large {
@@ -56,14 +91,14 @@ section {
     }
   }
   .m-custom-read {
-    @include xxlarge {
-      padding: 0 0 0 15rem;
-    }
-    @include xlarge {
-      padding: 0rem 0 0 12rem;
-    }
     @include large {
       padding: 5rem 0 0 0;
+    }
+    @include xlarge {
+      margin: -13rem 0 0 72rem;
+    }
+    @include xxlarge {
+      margin: -8rem 0 0 70rem;
     }
   }
 }
