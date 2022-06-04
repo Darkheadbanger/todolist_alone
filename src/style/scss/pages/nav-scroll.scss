@@ -14,3 +14,35 @@
     }
   }
 }
+
+.mr-custom-date-logo {
+  margin-right: 18rem;
+  @include small {
+    margin-right: 24rem;
+  }
+  @include medium {
+    margin-right: 52rem;
+  }
+}
+
+.mt-custom-date {
+  @include small {
+    margin-top: 2.35rem;
+  }
+  @include medium {
+    margin-top: 2.35rem;
+  }
+
+  @include large {
+    margin-top: 3rem;
+  }
+}
+.ms-custom-date {
+  @include small {
+    margin-left: 5.7rem;
+  }
+
+  @include medium {
+    margin-left: 7rem;
+  }
+}

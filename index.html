@@ -1,577 +1,613 @@
 <!DOCTYPE html>
 <html lang="fr">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link
-         rel="stylesheet"
-         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-         />
-      <title>ToDoList</title>
-   </head>
-   <body>
-      <header>
-         <nav
-            class="fixed-top navbar-expand-md navbar-dark navbar navbar__coulour d-none d-lg-block "
-            >
-            <div class="container p-0 ms-5">
-               <div class="container-fluid">
-                  <div class="row">
-                     <div class="col-first-custom">
-                        <div class="row bd-highlight mt-3">
-                           <div class="p2 bd-highlight me-2 col-custom-logo">
-                              <i class="fa-solid fa-list-check text-light fa-2xl"></i>
-                           </div>
-                           <div class="p2 align-self-center bd-highlight col">
-                              <a href="#" class="navbar-brand text-brand"
-                                 >
-                                 <h1 class="h5">Do The Day</h1>
-                              </a
-                                 >
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-6 col-xl-4 ms-custom-search w-custom-search ms-custom-search">
-                        <form action="" class="row form-inline mt-3 col-xs m-custom-form">
-                           <div
-                              class="col align-items-center overflow-hidden"
-                              >
-                              <input
-                                 type="text"
-                                 class="form-control mr-sm-1 border border-dark rounded input-top input-top__shadow input-top--bg-color"
-                                 autocomplete="search-keyword-suggestions"
-                                 maxlength="500"
-                                 aria-hidden="true"
-                                 value=""
-                                 placeholder="Chercher un article..."
-                                 />
-                              <i class="fa-solid fa-magnifying-glass text-light mt-custom-search-input ms-custom-search-input"></i>
-                           </div>
-                           <div
-                              class="col align-items-center overflow-hidden"
-                              >
-                              <input
-                                 type="text"
-                                 class="form-control mr-sm-1 border border-dark rounded input-top input-top__shadow input-top--bg-color"
-                                 autocomplete="search-keyword-suggestions"
-                                 maxlength="500"
-                                 aria-hidden="true"
-                                 value=""
-                                 placeholder="Catégorie"
-                                 />
-                              <i class="fa-solid fa-angle-down text-light mt-custom-search-input ms-custom-search-input"></i>
-                           </div>
-                        </form>
-                     </div>
-                     <div class="col-heure-custom">
-                        <p href="#" class="navbar-brand text-date text-date__spacing">
-                           20/05/2022
-                        </p>
-                        <p href="#" class="navbar-brand text-heure text-heure__spacing">
-                           10H00
-                        </p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </nav>
-         <nav
-            class="navbar-left navbar-left--colour position-fixed h-100 top-0 start-0 d-none d-lg-block w-custom-nav"
-            >
-            <div class="container row justify-content-center py-5 px-5">
-               <div class="row mt-custom-date">
-                  <div class="col-2">
-                     <i class="fa-solid fa-calendar-check fa-xl text-light"></i>
-                  </div>
-                  <div class="col-2 ms-2">
-                     <small class="text-light col mb-date-custom1">Aujourd'hui</small>
-                  </div>
-               </div>
-               <div class="row pt-4">
-                  <div class="col-2">
-                     <i class="fa-solid fa-calendar-plus fa-xl text-light"></i>
-                  </div>
-                  <div class="col-2 ms-2">
-                     <small class="text-light col mb-date-custom1">demain</small>
-                  </div>
-               </div>
-               <div class="row pt-4">
-                  <div class="col-2">
-                     <i class="fa-solid fa-calendar-days fa-xl text-light"></i>
-                  </div>
-                  <div class="col-2 ms-2">
-                     <small class="text-light col mb-date-custom1">Date...</small>
-                  </div>
-               </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <title>ToDoList</title>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="fixed-top navbar-expand-md navbar-dark navbar navbar__coulour d-none d-lg-block"
+      >
+        <div class="container p-0 ms-5">
+          <div class="container-fluid">
             <div class="row">
-               <div class="col d-flex justify-content-center">
-                  <i
-                     class="fa-solid fa-book-open-reader fa-2xl text-light p-custom-read"
-                     ></i>
-               </div>
+              <div class="col-first-custom">
+                <div class="row bd-highlight mt-3">
+                  <div class="p2 bd-highlight me-2 col-custom-logo">
+                    <i class="fa-solid fa-list-check text-light fa-2xl"></i>
+                  </div>
+                  <div class="p2 align-self-center bd-highlight col">
+                    <a href="#" class="navbar-brand text-brand">
+                      <h1 class="h5">Do The Day</h1>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-md-6 col-xl-4 ms-custom-search w-custom-search ms-custom-search"
+              >
+                <form
+                  action=""
+                  class="row form-inline mt-3 col-xs m-custom-form"
+                >
+                  <div class="col align-items-center overflow-hidden">
+                    <input
+                      type="text"
+                      class="form-control mr-sm-1 border border-dark rounded input-top input-top__shadow input-top--bg-color"
+                      autocomplete="search-keyword-suggestions"
+                      maxlength="500"
+                      aria-hidden="true"
+                      value=""
+                      placeholder="Chercher un article..."
+                    />
+                    <i
+                      class="fa-solid fa-magnifying-glass text-light mt-custom-search-input ms-custom-search-input"
+                    ></i>
+                  </div>
+                  <div class="col align-items-center overflow-hidden">
+                    <input
+                      type="text"
+                      class="form-control mr-sm-1 border border-dark rounded input-top input-top__shadow input-top--bg-color"
+                      autocomplete="search-keyword-suggestions"
+                      maxlength="500"
+                      aria-hidden="true"
+                      value=""
+                      placeholder="Catégorie"
+                    />
+                    <i
+                      class="fa-solid fa-angle-down text-light mt-custom-search-input ms-custom-search-input"
+                    ></i>
+                  </div>
+                </form>
+              </div>
+              <div class="col-heure-custom">
+                <p href="#" class="navbar-brand text-date text-date__spacing">
+                  20/05/2022
+                </p>
+                <p href="#" class="navbar-brand text-heure text-heure__spacing">
+                  10H00
+                </p>
+              </div>
             </div>
-         </nav>
-      </header>
-      <section>
-         <!-- Scroll add d-none pour le cacher pour l'instant -->
-      <div
-         class="scroll-right scroll-right--colour position-fixed h-100 top-0 start-0 end-0 bottom-0 d-none d-lg-none w-custom-nav z-index-scroll"
-         >
-         <nav
-         class="fixed-top navbar-expand-md navbar-dark  d-block d-lg-none"
-         >
-            <div class="container-fluid nav-scroll">
-               <div class="row">
-                  <div class="col-8">
-                     <div class="row bd-highlight mt-3">
-                        <div class="p2 bd-highlight col-custom-logo-scroll">
-                           <i class="fa-solid fa-list-check text-light fa-2xl"></i>
-                        </div>
-                        <div class="p2 align-self-center bd-highlight col-2">
-                           <a href="#" class="navbar-brand text-brand"
-                              >
-                              <h1 class="h5">Do The Day</h1>
-                           </a
-                              >
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <i class="fa-solid fa-magnifying-glass fa-xl text-light mt-custom-loop ms-custom-loop"></i>
-                  </div>
-               </div>
-         </div>
+          </div>
+        </div>
       </nav>
-         <div class="row justify-content-center mt-5 py-4 d-block d-lg-none">
-            <div class="col">
-               <form class="container" action="">
+      <nav
+        class="navbar-left navbar-left--colour position-fixed h-100 top-0 start-0 d-none d-lg-block w-custom-nav"
+      >
+        <div class="container row justify-content-center py-5 px-5">
+          <div class="row mt-custom-date">
+            <div class="col-2">
+              <i class="fa-solid fa-calendar-check fa-xl text-light"></i>
+            </div>
+            <div class="col-2 ms-2">
+              <small class="text-light col mb-date-custom1">Aujourd'hui</small>
+            </div>
+          </div>
+          <div class="row pt-4">
+            <div class="col-2">
+              <i class="fa-solid fa-calendar-plus fa-xl text-light"></i>
+            </div>
+            <div class="col-2 ms-2">
+              <small class="text-light col mb-date-custom1">demain</small>
+            </div>
+          </div>
+          <div class="row pt-4">
+            <div class="col-2">
+              <i class="fa-solid fa-calendar-days fa-xl text-light"></i>
+            </div>
+            <div class="col-2 ms-2">
+              <small class="text-light col mb-date-custom1">Date...</small>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col d-flex justify-content-center">
+            <i
+              class="fa-solid fa-book-open-reader fa-2xl text-light p-custom-read"
+            ></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <!-- Scroll add d-none pour le cacher pour l'instant -->
+      <div
+        class="scroll-right scroll-right--colour position-fixed h-100 top-0 start-0 end-0 bottom-0 d-none d-lg-none w-custom-nav z-index-scroll"
+      >
+        <div class="row justify-content-center mt-5 py-4 d-block d-lg-none">
+          <div class="col">
+            <form class="container" action="">
+              <div class="row row-cols-auto justify-content-center">
+                <div class="col mb-4">
                   <div
-                     class="row row-cols-auto justify-content-center"
-                     >
-                     <div class="col mb-4">
-                        <div
-                           class="d-flex flex-row align-items-center overflow-hidden w-custom-left"
-                           >
-                           <input
-                              type="text"
-                              class="form-control border w-100 border-dark rounded input-top input-top__shadow input-top--bg-color"
-                              autocomplete="search-keyword-suggestions"
-                              maxlength="500"
-                              aria-hidden="true"
-                              value=""
-                              placeholder="Un article ou une tâche..."
-                              />
-                           <i class="fa-solid fa-angle-right text-light arrow-left"></i>
-                        </div>
-                     </div>
-                     <div class="col mb-2">
-                        <div
-                           class="d-flex flex-row align-items-center overflow-hidden w-custom-description"
-                           >
-                           <input
-                              type="text"
-                              class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
-                              autocomplete="search-keyword-suggestions"
-                              maxlength="500"
-                              aria-hidden="true"
-                              value=""
-                              placeholder="Description..."
-                              /><i
-                              class="fa-solid fa-angle-right text-light arrow-right"
-                              ></i>
-                        </div>
-                     </div>
+                    class="d-flex flex-row align-items-center overflow-hidden w-custom-left"
+                  >
+                    <input
+                      type="text"
+                      class="form-control border w-100 border-dark rounded input-top input-top__shadow input-top--bg-color"
+                      autocomplete="search-keyword-suggestions"
+                      maxlength="500"
+                      aria-hidden="true"
+                      value=""
+                      placeholder="Un article ou une tâche..."
+                    />
+                    <i
+                      class="fa-solid fa-angle-right text-light arrow-left"
+                    ></i>
                   </div>
-                  <div class="row row-cols-auto justify-content-center mt-3 ">
-                     <div class="col mb-4 ms-lg-4">
-                        <div
-                           class="d-flex flex-row align-items-center overflow-hidden w-custom-left"
-                           >
-                           <input
-                              type="text"
-                              class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
-                              autocomplete="search-keyword-suggestions"
-                              maxlength="500"
-                              aria-hidden="true"
-                              value=""
-                              placeholder="Catégorie..."
-                              /><i
-                              class="fa-solid fa-angle-right text-light arrow-left"
-                              ></i>
-                        </div>
-                     </div>
-                     <div class="col">
-                        <div
-                           class="d-flex flex-row align-items-center overflow-hidden w-custom-quantity"
-                           >
-                           <input
-                              type="text"
-                              class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
-                              autocomplete="search-keyword-suggestions"
-                              maxlength="500"
-                              aria-hidden="true"
-                              value=""
-                              placeholder="Quantité..."
-                              /><i
-                              class="fa-solid fa-angle-right text-light arrow-right"
-                              ></i>
-                        </div>
-                     </div>
+                </div>
+                <div class="col mb-2">
+                  <div
+                    class="d-flex flex-row align-items-center overflow-hidden w-custom-description"
+                  >
+                    <input
+                      type="text"
+                      class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
+                      autocomplete="search-keyword-suggestions"
+                      maxlength="500"
+                      aria-hidden="true"
+                      value=""
+                      placeholder="Description..."
+                    /><i
+                      class="fa-solid fa-angle-right text-light arrow-right"
+                    ></i>
                   </div>
-                  <div class="row row-cols-auto justify-content-center ">
-                     <div class="col mx-sm-5 mx-custom-md-add">
-                        <button type="button" class="btn btn-dark mt-3 btn-add">
-                        Ajouter
-                        </button>
-                     </div>
+                </div>
+              </div>
+              <div class="row row-cols-auto justify-content-center mt-3">
+                <div class="col mb-4 ms-lg-4">
+                  <div
+                    class="d-flex flex-row align-items-center overflow-hidden w-custom-left"
+                  >
+                    <input
+                      type="text"
+                      class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
+                      autocomplete="search-keyword-suggestions"
+                      maxlength="500"
+                      aria-hidden="true"
+                      value=""
+                      placeholder="Catégorie..."
+                    /><i
+                      class="fa-solid fa-angle-right text-light arrow-left"
+                    ></i>
                   </div>
-               </form>
-            </div>
-         </div>
-         <div class="row justify-content-end">
-            <div class="col w-100 h-auto">
-               <span class="round-button rounded-circle position-absolute top-custom-round end-custom-round w-custom-rounded h-custom-rounded">
-                  <i class="fa-solid fa-plus text-light fa-xl mt-custom-plus ml-custom-plus"></i>
-               </span>
-            </div>
-         </div>
+                </div>
+                <div class="col">
+                  <div
+                    class="d-flex flex-row align-items-center overflow-hidden w-custom-quantity"
+                  >
+                    <input
+                      type="text"
+                      class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
+                      autocomplete="search-keyword-suggestions"
+                      maxlength="500"
+                      aria-hidden="true"
+                      value=""
+                      placeholder="Quantité..."
+                    /><i
+                      class="fa-solid fa-angle-right text-light arrow-right"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="row row-cols-auto justify-content-center ps-custom-row-button"
+              >
+                <div class="col mt-5 pt-5">
+                  <button type="button" class="btn btn-dark mt-3 btn-add">
+                    Ajouter
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div
+          class="row justify-content-end top-custom-button-round left-custom-button-round bottom-0 right-0"
+        >
+          <div class="col w-100 h-auto">
+            <span
+              class="round-button rounded-circle position-absolute top-custom-round end-custom-round w-custom-rounded h-custom-rounded"
+            >
+              <i
+                class="fa-solid fa-plus text-light fa-xl mt-custom-plus ml-custom-plus ml-custom-plus pr-custom-plus pb-custom-plus"
+              ></i>
+            </span>
+          </div>
+        </div>
       </div>
       <!-- Fin scroll add -->
-
-         <!-- Scroll search -->
+      <!-- Scroll search, d-none pour l'instant -->
       <div
-         class="scroll-right scroll-right--colour position-fixed h-100 top-0 start-0 end-0 bottom-0 d-block d-lg-none w-custom-nav z-index-scroll"
-         >
-         <nav
-         class="fixed-top navbar-expand-md navbar-dark  d-block d-lg-none"
-         >
-            <div class="container-fluid nav-scroll">
-               <div class="row">
-                  <div class="col-8">
-                     <div class="row bd-highlight mt-3">
-                        <div class="p2 bd-highlight col-custom-logo-scroll">
-                           <i class="fa-solid fa-list-check text-light fa-2xl"></i>
-                        </div>
-                        <div class="p2 align-self-center bd-highlight col-2">
-                           <a href="#" class="navbar-brand text-brand"
-                              >
-                              <h1 class="h5">Do The Day</h1>
-                           </a
-                              >
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col">
-                     <i class="fa-solid fa-magnifying-glass fa-xl text-light mt-custom-loop ms-custom-loop"></i>
-                  </div>
-               </div>
-         </div>
-      </nav>
-         <div class="row justify-content-center mt-5 py-4 d-block d-lg-none">
-            <div class="col">
-               <form class="container" action="">
+        class="scroll-right scroll-right--colour position-fixed h-100 top-0 start-0 end-0 bottom-0 d-none d-lg-none w-custom-nav z-index-scroll"
+      >
+        <div class="row justify-content-center mt-5 py-4 d-block d-lg-none">
+          <div class="col">
+            <form class="container" action="">
+              <div class="row row-cols-auto justify-content-center">
+                <div class="col mb-4">
                   <div
-                     class="row row-cols-auto justify-content-center"
-                     >
-                     <div class="col mb-4">
-                        <div
-                           class="d-flex flex-row align-items-center overflow-hidden w-custom-left"
-                           >
-                           <input
-                              type="text"
-                              class="form-control border w-100 border-dark rounded input-top input-top__shadow input-top--bg-color"
-                              autocomplete="search-keyword-suggestions"
-                              maxlength="500"
-                              aria-hidden="true"
-                              value=""
-                              placeholder="Catégorie..."
-                              />
-                           <i class="fa-solid fa-angle-right text-light arrow-left"></i>
-                        </div>
-                     </div>
-                     <div class="col mb-2">
-                        <div
-                           class="d-flex flex-row align-items-center overflow-hidden w-custom-description"
-                           >
-                           <input
-                              type="text"
-                              class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
-                              autocomplete="search-keyword-suggestions"
-                              maxlength="500"
-                              aria-hidden="true"
-                              value=""
-                              placeholder="Chercher un artcile ou une activité..."
-                              /><i
-                              class="fa-solid fa-angle-right text-light arrow-right"
-                              ></i>
-                        </div>
-                     </div>
+                    class="d-flex flex-row align-items-center overflow-hidden w-custom-left"
+                  >
+                    <input
+                      type="text"
+                      class="form-control border w-100 border-dark rounded input-top input-top__shadow input-top--bg-color"
+                      autocomplete="search-keyword-suggestions"
+                      maxlength="500"
+                      aria-hidden="true"
+                      value=""
+                      placeholder="Catégorie..."
+                    />
+                    <i
+                      class="fa-solid fa-angle-right text-light arrow-left"
+                    ></i>
                   </div>
-                  <div class="row row-cols-auto justify-content-center ">
-                     <div class="col mx-sm-5 mx-custom-md-add">
-                        <button type="button" class="btn btn-dark mt-3 btn-add">
-                        Ajouter
-                        </button>
-                     </div>
+                </div>
+                <div class="col mb-2">
+                  <div
+                    class="d-flex flex-row align-items-center overflow-hidden w-custom-description"
+                  >
+                    <input
+                      type="text"
+                      class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
+                      autocomplete="search-keyword-suggestions"
+                      maxlength="500"
+                      aria-hidden="true"
+                      value=""
+                      placeholder="Chercher un artcile ou une activité..."
+                    /><i
+                      class="fa-solid fa-angle-right text-light arrow-right"
+                    ></i>
                   </div>
-               </form>
-            </div>
-         </div>
-         <div class="row justify-content-end">
-            <div class="col w-100 h-auto">
-               <span class="round-button rounded-circle position-absolute top-custom-round end-custom-round w-custom-rounded h-custom-rounded">
-                  <i class="fa-solid fa-minus text-light fa-xl mt-custom-plus ml-custom-plus"></i>
-               </span>
-            </div>
-         </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-8 mr-custom-date-logo">
+                  <i
+                    class="fa-solid fa-calendar-days fa-xl text-light mt-5"
+                  ></i>
+                </div>
+                <div class="col-8 mt-custom-date ms-custom-date">
+                  <p class="text-light">Date...</p>
+                </div>
+              </div>
+              <div
+                class="row row-cols-auto justify-content-center ps-sm-0 pt-custom-row-button"
+              >
+                <div class="col">
+                  <button type="button" class="btn btn-dark mt-3 btn-add">
+                    Chercher
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row justify-content-end">
+          <div class="col w-100 h-auto">
+            <span
+              class="round-button rounded-circle position-absolute top-custom-round end-custom-round w-custom-rounded h-custom-rounded"
+            >
+              <i
+                class="fa-solid fa-minus text-light fa-xl mt-custom-plus ml-custom-plus"
+              ></i>
+            </span>
+          </div>
+        </div>
       </div>
       <!-- Fin scroll search -->
-
-         <div class="row justify-content-center mt-5 py-4 d-none d-lg-block ">
-            <div class="col-8 m-custom-input">
-               <form class="container form-add" action="">
-                  <div
-                     class="row row-cols-auto justify-content-lg-center ms-custom-first-inut"
-                     >
-                     <div class="col">
-                        <div
-                           class="d-flex flex-row align-items-center overflow-hidden w-custom-left "
-                           >
-                           <input
-                              type="text"
-                              class="form-control border w-100 border-dark rounded input-top input-top__shadow input-top--bg-color"
-                              autocomplete="search-keyword-suggestions"
-                              maxlength="500"
-                              aria-hidden="true"
-                              value=""
-                              placeholder="Un article ou une tâche..."
-                              />
-                           <i class="fa-solid fa-angle-right text-light arrow-left"></i>
-                        </div>
-                     </div>
-                     <div class="col">
-                        <div
-                           class="d-flex flex-row align-items-center overflow-hidden w-custom-description"
-                           >
-                           <input
-                              type="text"
-                              class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
-                              autocomplete="search-keyword-suggestions"
-                              maxlength="500"
-                              aria-hidden="true"
-                              value=""
-                              placeholder="Description..."
-                              /><i
-                              class="fa-solid fa-angle-right text-light arrow-right"
-                              ></i>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="row mt-3 align-self-center">
-                     <div class="col ms-lg-4">
-                        <div
-                           class="d-flex flex-row align-items-center overflow-hidden w-custom-left"
-                           >
-                           <input
-                              type="text"
-                              class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
-                              autocomplete="search-keyword-suggestions"
-                              maxlength="500"
-                              aria-hidden="true"
-                              value=""
-                              placeholder="Catégorie..."
-                              /><i
-                              class="fa-solid fa-angle-right text-light arrow-left"
-                              ></i>
-                        </div>
-                     </div>
-                     <div class="col">
-                        <div
-                           class="d-flex flex-row align-items-center overflow-hidden w-custom-quantity"
-                           >
-                           <input
-                              type="text"
-                              class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
-                              autocomplete="search-keyword-suggestions"
-                              maxlength="500"
-                              aria-hidden="true"
-                              value=""
-                              placeholder="Quantité..."
-                              /><i
-                              class="fa-solid fa-angle-right text-light arrow-right"
-                              ></i>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="row row-cols-auto justify-content-center ">
-                     <div class="col mx-sm-5 mx-custom-md-add">
-                        <button type="button" class="btn btn-dark mt-3 btn-add">
-                        Ajouter
-                        </button>
-                     </div>
-                  </div>
-
-               </form>
-            </div>
-            <div class="col-2 m-custom-read d-none d-lg-block">
-               <i class="fa-solid fa-book-open-reader fa-2xl text-light"></i>
-            </div>
-         </div>
-         <!-- Read a droite, 5.2 > 1400 et < 1200 margin: 5.35rem 0px 0px -7.25rem; -->
-         <!-- artciles   -->
-         <div class="row g-4 ps-custom-container-article pt-5 mt-3 z-index-article">
-         <div class="col mb-4 pe-4">
-            <div class="card card__element card--modifier rounded">
-               <div class="card-header card-header__element card-header--modifier">
-                  <div class="d-flex justify-content-between align-items-center">
-                     <div class="d-flex align-items-center">
-                        <span class="todo done"></span>
-                        <div class="row row-cols-8 ">
-                           <div class="col ms-3 mt-3">
-                              <p class="fw-bold card-title text-custom-title ">Reading</p>
-                           </div>
-                           <div class="col ms-custom-date mt-custom-date">
-                              <p class="fw-bold card-title text-light h-custom-date">30/05/2022 </p>
-                              <p class="fw-bold card-title text-light ms-3">10:00 </p>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="row justify-content-md-end">
-                        <div class="col-6">
-                           <i class="fa-solid fa-pen-to-square fa-xl text-success"></i>
-                        </div>
-                        <div class="col-6">
-                           <i class="fa-solid fa-trash-can fa-xl text-danger"></i>   
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="card-body card-body__element">
-                  <div class="d-flex justify-content-between align-items-center">
-                     <div class="d-flex align-items-center">
-                        <span class="todo done"></span>
-                        <div class="col ms-3 mt-3">
-                           <p class="fw-bold card-title text-custom-title ">Reading Description</p>
-                        </div>
-                     </div>
-                     <div class="row justify-content-md-end">
-                        <div class="col-6">
-                           <i class="fa-solid fa-pen-to-square fa-xl text-success"></i>
-                        </div>
-                        <div class="col-6">
-                           <i class="fa-solid fa-trash-can fa-xl text-danger"></i>   
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div
-                  class="card-footer card-footer____element card-footer--modifier border-0 bg-light"
-                  >
-                  <div class="d-flex justify-content-between align-items-center">
-                     <div class="d-flex align-items-center">
-                        <div class="col ms-custom-categorie mt-3">
-                           <p class="fw-bold card-title text-custom-title w-custom-categorie">Catégorie: Activité</p>
-                        </div>
-                        <div class="col ms-custom-categorie mt-3">
-                           <p class="fw-bold card-title text-custom-title w-custom-quantité">Quantité: 1</p>
-                        </div>
-                     </div>
-                     <div class="row justify-content-md-end">
-                        <div class="col-6">
-                           <i class="fa-solid fa-pen-to-square fa-xl text-success"></i>
-                        </div>
-                        <div class="col-6">
-                           <i class="fa-solid fa-trash-can fa-xl text-danger"></i>   
-                        </div>
-                     </div>                  </div>
-               </div>
-               <a class="stretched-link" href="#ToAnotherPageWithId"></a>
-            </div>
-         </div>
-         <div class="col mb-4 pe-4">
-            <div class="card card__element card--modifier rounded">
-               <div class="card-header card-header__element card-header--modifier">
-                  <div class="d-flex justify-content-between align-items-center">
-                     <div class="d-flex align-items-center">
-                        <span class="todo done"></span>
-                        <div class="row row-cols-8 ">
-                           <div class="col ms-3 mt-3">
-                              <p class="fw-bold card-title text-custom-title ">Reading</p>
-                           </div>
-                           <div class="col ms-custom-date mt-custom-date">
-                              <p class="fw-bold card-title text-light h-custom-date">30/05/2022 </p>
-                              <p class="fw-bold card-title text-light ms-3">10:00 </p>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="row justify-content-md-end">
-                        <div class="col-6">
-                           <i class="fa-solid fa-pen-to-square fa-xl text-success"></i>
-                        </div>
-                        <div class="col-6">
-                           <i class="fa-solid fa-trash-can fa-xl text-danger"></i>   
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="card-body card-body__element">
-                  <div class="d-flex justify-content-between align-items-center">
-                     <div class="d-flex align-items-center">
-                        <span class="todo done"></span>
-                        <div class="col ms-3 mt-3">
-                           <p class="fw-bold card-title text-custom-title ">Reading Description</p>
-                        </div>
-                     </div>
-                     <div class="row justify-content-md-end">
-                        <div class="col-6">
-                           <i class="fa-solid fa-pen-to-square fa-xl text-success"></i>
-                        </div>
-                        <div class="col-6">
-                           <i class="fa-solid fa-trash-can fa-xl text-danger"></i>   
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div
-                  class="card-footer card-footer____element card-footer--modifier border-0 bg-light"
-                  >
-                  <div class="d-flex justify-content-between align-items-center">
-                     <div class="d-flex align-items-center">
-                        <div class="col ms-custom-categorie mt-3">
-                           <p class="fw-bold card-title text-custom-title w-custom-categorie">Catégorie: Activité</p>
-                        </div>
-                        <div class="col ms-custom-categorie mt-3">
-                           <p class="fw-bold card-title text-custom-title w-custom-quantity">Quantité: 1</p>
-                        </div>
-                     </div>
-                     <div class="row justify-content-md-end">
-                        <div class="col-6">
-                           <i class="fa-solid fa-pen-to-square fa-xl text-success"></i>
-                        </div>
-                        <div class="col-6">
-                           <i class="fa-solid fa-trash-can fa-xl text-danger"></i>   
-                        </div>
-                     </div>                  </div>
-               </div>
-               <!-- <a class="stretched-link" href="#ToAnotherPageWithId"></a> -->
-            </div>
-         </div>
-         <!-- Article -->
-         <!-- <ul>
-            <li>
-              <div>
-                <span class="todo done"></span>
-                <p>Text</p>
-                <button>Editer</button>
-                <button>Supprimer</button>
+      <!-- Input large > -->
+      <div class="row justify-content-center mt-5 py-4 d-none d-lg-block">
+        <div class="col-custom-input m-custom-input">
+          <form class="container form-add" action="">
+            <div
+              class="row row-cols-auto justify-content-lg-center ms-custom-first-inut"
+            >
+              <div class="col">
+                <div
+                  class="d-flex flex-row align-items-center overflow-hidden w-custom-left"
+                >
+                  <input
+                    type="text"
+                    class="form-control border w-100 border-dark rounded input-top input-top__shadow input-top--bg-color"
+                    autocomplete="search-keyword-suggestions"
+                    maxlength="500"
+                    aria-hidden="true"
+                    value=""
+                    placeholder="Un article ou une tâche..."
+                  />
+                  <i class="fa-solid fa-angle-right text-light arrow-left"></i>
+                </div>
               </div>
-            </li>
-            </ul> -->
-      </section>
-      <footer></footer>
-   </body>
+              <div class="col">
+                <div
+                  class="d-flex flex-row align-items-center overflow-hidden w-custom-description"
+                >
+                  <input
+                    type="text"
+                    class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
+                    autocomplete="search-keyword-suggestions"
+                    maxlength="500"
+                    aria-hidden="true"
+                    value=""
+                    placeholder="Description..."
+                  /><i
+                    class="fa-solid fa-angle-right text-light arrow-right"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 align-self-center">
+              <div class="col ms-lg-4">
+                <div
+                  class="d-flex flex-row align-items-center overflow-hidden w-custom-left"
+                >
+                  <input
+                    type="text"
+                    class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
+                    autocomplete="search-keyword-suggestions"
+                    maxlength="500"
+                    aria-hidden="true"
+                    value=""
+                    placeholder="Catégorie..."
+                  /><i
+                    class="fa-solid fa-angle-right text-light arrow-left"
+                  ></i>
+                </div>
+              </div>
+              <div class="col">
+                <div
+                  class="d-flex flex-row align-items-center overflow-hidden w-custom-quantity"
+                >
+                  <input
+                    type="text"
+                    class="form-control border border-dark rounded input-top input-top__shadow input-top--bg-color"
+                    autocomplete="search-keyword-suggestions"
+                    maxlength="500"
+                    aria-hidden="true"
+                    value=""
+                    placeholder="Quantité..."
+                  /><i
+                    class="fa-solid fa-angle-right text-light arrow-right"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div class="row row-cols-auto justify-content-center">
+              <div class="col mx-sm-5 mx-custom-md-add">
+                <button type="button" class="btn btn-dark mt-3 btn-add">
+                  Ajouter
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-2 m-custom-read d-none d-lg-block">
+          <i class="fa-solid fa-book-open-reader fa-2xl text-light"></i>
+        </div>
+      </div>
+      <!-- Fin input large > -->
+      <!-- Nav, logo et loop pour version portable -->
+      <nav class="fixed-top navbar-expand-md navbar-dark d-block d-lg-none">
+        <div class="container-fluid nav-scroll">
+          <div class="row">
+            <div class="col-8">
+              <div class="row bd-highlight mt-3">
+                <div class="p2 bd-highlight col-custom-logo-scroll">
+                  <i class="fa-solid fa-list-check text-light fa-2xl"></i>
+                </div>
+                <div class="p2 align-self-center bd-highlight col-2">
+                  <a href="#" class="navbar-brand text-brand">
+                    <h1 class="h5">Do The Day</h1>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <i
+                class="fa-solid fa-magnifying-glass fa-xl text-light mt-custom-loop ms-custom-loop"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Fin Nav, logo et loop pour version portable -->
+      <!-- artciles   -->
+      <div
+        class="row g-4 ps-custom-container-article pt-5 mt-3 z-index-article"
+      >
+        <div class="col mb-4 mt-5 pe-4">
+          <div class="card card__element card--modifier rounded">
+            <div class="card-header card-header__element card-header--modifier">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <span class="todo done"></span>
+                  <div class="row row-cols-8">
+                    <div class="col ms-3 mt-3">
+                      <p class="fw-bold card-title text-custom-title">
+                        Reading
+                      </p>
+                    </div>
+                    <div class="col ms-custom-date mt-custom-date">
+                      <p class="fw-bold card-title text-light h-custom-date">
+                        30/05/2022
+                      </p>
+                      <p class="fw-bold card-title text-light ms-3">10:00</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row justify-content-md-end">
+                  <div class="col-6">
+                    <i class="fa-solid fa-pen-to-square fa-xl text-success"></i>
+                  </div>
+                  <div class="col-6">
+                    <i class="fa-solid fa-trash-can fa-xl text-danger"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body card-body__element">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <span class="todo done"></span>
+                  <div class="col ms-3 mt-3">
+                    <p class="fw-bold card-title text-custom-title">
+                      Reading Description
+                    </p>
+                  </div>
+                </div>
+                <div class="row justify-content-md-end">
+                  <div class="col-6">
+                    <i class="fa-solid fa-pen-to-square fa-xl text-success"></i>
+                  </div>
+                  <div class="col-6">
+                    <i class="fa-solid fa-trash-can fa-xl text-danger"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card-footer card-footer____element card-footer--modifier border-0 bg-light"
+            >
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <div class="col ms-custom-categorie mt-3">
+                    <p
+                      class="fw-bold card-title text-custom-title w-custom-categorie"
+                    >
+                      Catégorie: Activité
+                    </p>
+                  </div>
+                  <div class="col ms-custom-categorie mt-3">
+                    <p
+                      class="fw-bold card-title text-custom-title w-custom-quantité"
+                    >
+                      Quantité: 1
+                    </p>
+                  </div>
+                </div>
+                <div class="row justify-content-md-end">
+                  <div class="col-6">
+                    <i class="fa-solid fa-pen-to-square fa-xl text-success"></i>
+                  </div>
+                  <div class="col-6">
+                    <i class="fa-solid fa-trash-can fa-xl text-danger"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <a class="stretched-link" href="#ToAnotherPageWithId"></a> -->
+          </div>
+        </div>
+        <div class="col mb-4 pe-4">
+          <div class="card card__element card--modifier rounded">
+            <div class="card-header card-header__element card-header--modifier">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <span class="todo done"></span>
+                  <div class="row row-cols-8">
+                    <div class="col ms-3 mt-3">
+                      <p class="fw-bold card-title text-custom-title">
+                        Reading
+                      </p>
+                    </div>
+                    <div class="col ms-custom-date mt-custom-date">
+                      <p class="fw-bold card-title text-light h-custom-date">
+                        30/05/2022
+                      </p>
+                      <p class="fw-bold card-title text-light ms-3">10:00</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row justify-content-md-end">
+                  <div class="col-6">
+                    <i class="fa-solid fa-pen-to-square fa-xl text-success"></i>
+                  </div>
+                  <div class="col-6">
+                    <i class="fa-solid fa-trash-can fa-xl text-danger"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body card-body__element">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <span class="todo done"></span>
+                  <div class="col ms-3 mt-3">
+                    <p class="fw-bold card-title text-custom-title">
+                      Reading Description
+                    </p>
+                  </div>
+                </div>
+                <div class="row justify-content-md-end">
+                  <div class="col-6">
+                    <i class="fa-solid fa-pen-to-square fa-xl text-success"></i>
+                  </div>
+                  <div class="col-6">
+                    <i class="fa-solid fa-trash-can fa-xl text-danger"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card-footer card-footer____element card-footer--modifier border-0 bg-light"
+            >
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                  <div class="col ms-custom-categorie mt-3">
+                    <p
+                      class="fw-bold card-title text-custom-title w-custom-categorie"
+                    >
+                      Catégorie: Activité
+                    </p>
+                  </div>
+                  <div class="col ms-custom-categorie mt-3">
+                    <p
+                      class="fw-bold card-title text-custom-title w-custom-quantity"
+                    >
+                      Quantité: 1
+                    </p>
+                  </div>
+                </div>
+                <div class="row justify-content-md-end">
+                  <div class="col-6">
+                    <i class="fa-solid fa-pen-to-square fa-xl text-success"></i>
+                  </div>
+                  <div class="col-6">
+                    <i class="fa-solid fa-trash-can fa-xl text-danger"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <a class="stretched-link" href="#ToAnotherPageWithId"></a> -->
+          </div>
+        </div>
+      </div>
+      <!-- Fin Article -->
+      <!-- Button +, d-block petit = d-none quand s'oeuvre le modal add, d-lg-none  -->
+      <div
+        class="row justify-content-end position-absolute top-custom-button-round left-custom-button-round bottom-0 right-0 d-block d-lg-none"
+      >
+        <div class="col w-100 h-auto">
+          <span
+            class="round-button rounded-circle position-absolute top-custom-round end-custom-round w-custom-rounded h-custom-rounded"
+          >
+            <i
+              class="fa-solid fa-plus text-light fa-xl mt-custom-plus ml-custom-plus ml-custom-plus pr-custom-plus pb-custom-plus"
+            ></i>
+          </span>
+        </div>
+      </div>
+    </section>
+    <footer></footer>
+  </body>
 </html>
-
 <!-- d-block d-lg-none pour petit block grande montre -->

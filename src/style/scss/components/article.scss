@@ -1,5 +1,11 @@
 .ps-custom-container-article {
-  padding: 0 8rem 0 22rem;
+  padding: 0 0rem 0 1rem;
+  @include medium {
+    padding: 0 2rem 0 2rem;
+  }
+  @include large {
+    padding: 0 8rem 0 22rem;
+  }
 
   .card {
     &__element {
@@ -84,11 +90,33 @@
   .w-custom-categroeie {
     width: 10rem;
   }
+  .z-index-nav {
+    z-index: 1000;
+  }
 }
 
 .z-index-article {
   z-index: auto;
 }
 
-/* article holder */
-/* Rond */
+/* Button Rond */
+section {
+  .top-custom-button-round {
+    top: 90%;
+  }
+  .left-custom-button-round {
+    left: 86%;
+  }
+  .mt-custom-plus {
+    margin-top: 1.4rem;
+  }
+  .ml-custom-plus {
+    margin-left: 0.8rem;
+  }
+  .pr-custom-plus {
+    padding-right: 0.8rem;
+  }
+  .pb-custom-plus {
+    padding-bottom: 1.5rem;
+  }
+}
