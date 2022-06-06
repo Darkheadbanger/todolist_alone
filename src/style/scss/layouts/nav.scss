@@ -7,6 +7,9 @@
     flex: 0 0 auto;
     width: 0.667%;
   }
+  .ps-heure-custom {
+    padding-left: 26%;
+  }
   .col-custom-logo {
     flex: 0 0 auto;
     width: 3.667%;
@@ -38,6 +41,20 @@
     box-shadow: $navbar-shadow;
   }
 
+  .p-custom-read-detail {
+    @include medium {
+      padding: 65% 0 180% 0rem;
+    }
+    @include xlarge {
+      padding: 65% 0 95% 0rem;
+    }
+    @include xxlarge {
+      padding: 65% 0 184% 0rem;
+    }
+    @include xxxlarge {
+      padding: 65% 0 70% 0rem;
+    }
+  }
   .p-custom-read {
     //1280px
     padding: 115% 0 0 0;

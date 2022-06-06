@@ -4,6 +4,11 @@
     @content;
   }
 }
+@mixin xsmallForDate {
+  @media screen and (min-width: map-get($grid-breakpoints, xsForDate)) {
+    @content;
+  }
+}
 @mixin small {
   @media screen and (min-width: map-get($grid-breakpoints, sm)) {
     @content;

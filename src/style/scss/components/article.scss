@@ -61,16 +61,18 @@
     height: 0.8rem;
   }
   .ms-custom-date {
-    margin-left: 11rem;
+    margin-left: 6rem;
   }
   .mt-custom-date {
-    @include xlarge1249 {
-      margin-top: -3rem;
+    margin-top: -3rem;
+
+    @include xsmall {
+      margin-top: 0rem;
     }
-    @include xxlarge {
-      margin-top: -2.8rem;
+    @include xsmallForDate {
+      margin-top: 0rem;
     }
-    @include xxxlarge {
+    @include small {
       margin-top: 0rem;
     }
   }
@@ -92,6 +94,12 @@
   }
   .z-index-nav {
     z-index: 1000;
+  }
+  .mr-custom-xs-button {
+    margin-right: -1.3rem;
+    @include small {
+      margin-right: -0.65rem;
+    }
   }
 }
 

@@ -92,13 +92,10 @@ section {
   }
   .m-custom-read {
     @include large {
-      padding: 5rem 0 0 0;
+      margin: -8rem 0 0 91%;
     }
     @include xlarge {
-      margin: -13rem 0 0 72rem;
-    }
-    @include xxlarge {
-      margin: -8rem 0 0 70rem;
+      margin: -8rem 0 0 90%;
     }
   }
 }

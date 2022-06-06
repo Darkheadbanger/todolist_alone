@@ -1,0 +1,13 @@
+section {
+  .ms-custom-chosen-task {
+    padding-left: 45%;
+  }
+  .mt-custom-chosen-task {
+    margin-top: 2rem;
+  }
+  .ps-custom-row-button-detail {
+    @include large {
+      padding-left: 8rem;
+    }
+  }
+}

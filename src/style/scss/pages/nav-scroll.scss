@@ -4,11 +4,13 @@
     width: 12.667%;
   }
   .mt-custom-loop {
+    margin-top: 1.9rem;
     @include small {
       margin-top: 2rem;
     }
   }
   .ms-custom-loop {
+    margin-left: 3rem;
     @include small {
       margin-left: 7rem;
     }
