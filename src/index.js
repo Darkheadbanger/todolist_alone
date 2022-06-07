@@ -33,9 +33,20 @@ if (document.readyState === "loading") {
         event.preventDefault();
         updateToDo(); // Ou updateToDoList à voir
       });
-      //   inputdescription.addEventListener("blur", (event) => {
-      //     event.target.style.background = "reed";
-      //   });
+      formAdd.addEventListener(
+        "blur",
+        (event) => {
+          event.target.style.color = "white";
+        },
+        true
+      );
+      formAdd.addEventListener(
+        "focus",
+        (event) => {
+          console.log(event.target);
+        },
+        true
+      );
     };
 
     const updateToDo = () => {
