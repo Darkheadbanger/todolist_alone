@@ -10,4 +10,7 @@ section {
       padding-left: 8rem;
     }
   }
-} 
+  .add-article-error, .add-categorie-error, .add-quantity-error{
+    display: none;
+  }
+}

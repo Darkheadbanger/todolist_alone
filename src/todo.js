@@ -26,42 +26,42 @@ class ToDoList {
     returntoDoListText.append(...todoArray);
   }
 
-  //   static creerToDoElement(text) {
-  //     const li = document.createElement("li");
-  //     const p = document.createElement("p");
-  //     const deleteButton = document.createElement("button");
-  //     const modifcationButton = document.createElement("button");
-  //     deleteButton.innerText = "Supprimer";
-  //     modifcationButton.innerText = "Modifier";
-  //     deleteButton.classList.add("danger");
-  //     deleteButton.classList.add("modification");
+  static creerToDoElement(text) {
+    const li = document.createElement("li");
+    const p = document.createElement("p");
+    const deleteButton = document.createElement("button");
+    const modifcationButton = document.createElement("button");
+    deleteButton.innerText = "Supprimer";
+    modifcationButton.innerText = "Modifier";
+    deleteButton.classList.add("danger");
+    deleteButton.classList.add("modification");
 
-  //     li.innerHTML = `
-  //     <span class="todo"></span>
-  //     `;
-  //     p.innerHTML = `${
-  //       text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
-  //     }`;
+    li.innerHTML = `
+      <span class="todo"></span>
+      `;
+    p.innerHTML = `${
+      text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()
+    }`;
 
-  //     li.style.cursor = "pointer";
+    li.style.cursor = "pointer";
 
-  //     li.append(p, modifcationButton, deleteButton);
+    li.append(p, modifcationButton, deleteButton);
 
-  //     return li;
-  //   }
-  //   createToDo(text) {
-  //     console.log(this.arrayText.push(text));
-  //     this.toDoListText.append(ToDoList.creerToDoElement(text));
-  //     this.updateToDoList();
-  //   }
+    return li;
+  }
+  createToDo(text) {
+    console.log(this.arrayText.push(text));
+    this.toDoListText.append(ToDoList.creerToDoElement(text));
+    this.updateToDoList();
+  }
 
-  //   effacerToDo() {
-  //     this.updateToDoList();
-  //   }
+  effacerToDo() {
+    this.updateToDoList();
+  }
 
-  //   modifierToDoElement() {
-  //     updateToDoList();
-  //   }
+  modifierToDoElement() {
+    updateToDoList();
+  }
 }
 
 // Export
