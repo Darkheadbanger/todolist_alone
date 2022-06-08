@@ -1,8 +1,8 @@
 import "./style/scss/_custom.scss";
 import "./style/scss/_custom.css";
-// import "./todo.js";
+import "./todo.js";
 
-import { ToDoList } from "./todo.js";
+import ToDoList from "./todo.js";
 // You can specify which plugins you need
 import * as all from "bootstrap";
 import { arrow, createPopper } from "@popperjs/core";
@@ -23,6 +23,8 @@ if (document.readyState === "loading") {
   window.addEventListener("DOMContentLoaded", pageReady);
 } else {
   const pageReady = () => {
+    const todolist = new ToDoList();
+    console.log(todolist);
     const eventListenerAddArticle = () => {
       // EventListener
       formAdd.addEventListener("submit", (event) => {
@@ -47,6 +49,13 @@ if (document.readyState === "loading") {
         },
         true
       );
+      formAdd.addEventListener(
+        "click",
+        (event) => {
+          console.log(event.target);
+        },
+        true
+      );
     };
 
     const updateToDo = () => {
@@ -56,6 +65,11 @@ if (document.readyState === "loading") {
         inputCategorie.value,
         inputQuantity.value,
       ];
+      //   todolist.updateToDoList(inputAddValue);
+      filledInputAddToZero(inputAddValue);
+      errorInputAdd(inputAddValue);
+    };
+    const filledInputAddToZero = (inputAddValue) => {
       if (inputAddValue) {
         inputArticle.value = "";
         inputdescription.value = "";
@@ -65,7 +79,6 @@ if (document.readyState === "loading") {
         addCategorieError.classList.add("add-categorie-error");
         addquantityError.classList.add("add-quantity-error");
       }
-      errorInputAdd(inputAddValue);
     };
 
     const errorInputAdd = (inputAddValue) => {
