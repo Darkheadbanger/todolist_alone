@@ -1,17 +1,17 @@
 const arrayText = [
   {
-    textArticle: "Article",
-    textDescription: "Description",
-    textCategorie: "Activiter",
-    textQuantity: 5,
-    done: false,
-    date: new Date(),
-    edit: false,
+    // textArticle: "Article",
+    // textDescription: "Description",
+    // textCategorie: "Activiter",
+    // textQuantity: 5,
+    // done: false,
+    // date: new Date(),
+    // edit: false,
   },
 ];
 
 // DOM
-const ul = document.querySelector("ul");
+const ul = document.querySelector(".list-itmes");
 const formAdd = document.querySelector("#formAdd");
 const inputArticle = document.querySelector("#input-article");
 const inputdescription = document.querySelector("#input-description");
@@ -20,17 +20,19 @@ const inputQuantity = document.querySelector("#input-quantity");
 const addArticleError = document.querySelector(".add-article-error");
 const addCategorieError = document.querySelector(".add-categorie-error");
 const addquantityError = document.querySelector(".add-quantity-error");
+const buttonSubmit = document.querySelector("#buttonAdd");
 
 // Créer la classe todolist
 class Todo {
   constructor() {
-    this.list = document.querySelector(".list-itmes");
+    this.list = ul;
     this.renderingTodo();
 
     // EventListener
+
     formAdd.addEventListener("submit", (event) => {
       event.preventDefault();
-      this.updateToDo().bind(this); // Ou updateToDoList à voir
+      this.inputValue();
     });
 
     formAdd.addEventListener(
@@ -65,10 +67,10 @@ class Todo {
     inputQuantityValue
   ) {
     this.list.innerHTML = "";
+
     arrayText.forEach((item, index) => {
       if (!item.edit) {
-        this.createToDoElementDom(item, index);
-        this.creerToDo(
+        this.createToDoElementDom(
           item,
           index,
           inputArticleValue,
@@ -81,53 +83,19 @@ class Todo {
       }
 
       this.toDoDone(item);
+
       this.list.appendChild(this.li);
     });
   }
 
-  updateToDo() {
-    const inputAddValue = [
-      inputArticle.value,
-      inputdescription.value,
-      inputCategorie.value,
-      inputQuantity.value,
-    ];
-
-    this.filledInputAddToZero(inputAddValue);
-    this.errorInputAdd(inputAddValue);
-    this.renderingTodo(
-      inputAddValue[0],
-      inputAddValue[1],
-      inputAddValue[2],
-      inputAddValue[3]
-    );
-  }
-
-  filledInputAddToZero(inputAddValue) {
-    if (inputAddValue) {
-      inputArticle.value = "";
-      inputdescription.value = "";
-      inputCategorie.value = "";
-      inputQuantity.value = "";
-      addArticleError.classList.add("add-article-error");
-      addCategorieError.classList.add("add-categorie-error");
-      addquantityError.classList.add("add-quantity-error");
-    }
-  }
-  errorInputAdd(inputAddValue) {
-    if (
-      inputAddValue[0] === "" &&
-      inputAddValue[1] === "" &&
-      inputAddValue[2] === "" &&
-      inputAddValue[3] === ""
-    ) {
-      addArticleError.classList.remove("add-article-error");
-      addCategorieError.classList.remove("add-categorie-error");
-      addquantityError.classList.remove("add-quantity-error");
-    }
-  }
-
-  createToDoElementDom(item) {
+  createToDoElementDom(
+    item,
+    index,
+    inputArticleValue,
+    inputDescriptionValue,
+    inputCategorieValue,
+    inputQuantityValue
+  ) {
     this.li = document.createElement("li");
     this.li.classList.add("list");
     // const dates = item.date;
@@ -156,7 +124,7 @@ class Todo {
             <div class="row row-cols-8">
               <div class="col ms-3 mt-3">
                 <p class="fw-bold card-title text-custom-title">
-                  ${item.textArticle}
+                  ${inputArticleValue}
                 </p>
               </div>
               <!-- ici date -->>
@@ -186,7 +154,7 @@ class Todo {
             <span class="todo ${item.done ? done : ""}"></span>
             <div class="col ms-3 mt-2">
               <p class="fw-bold card-title text-custom-title">
-                ${item.textDescription}
+                ${inputDescriptionValue}
               </p>
             </div>
           </div>
@@ -217,14 +185,14 @@ class Todo {
               <p
                 class="fw-bold card-title text-custom-title w-custom-categorie"
               >
-                Catégorie: ${item.textCategorie}
+                Catégorie: ${inputCategorieValue}
               </p>
             </div>
             <div class="col ms-custom-categorie mt-3">
               <p
                 class="fw-bold card-title text-custom-title w-custom-quantité"
               >
-                Quantité: ${item.textQuantity}
+                Quantité: ${inputQuantityValue}
               </p>
             </div>
           </div>
@@ -255,6 +223,35 @@ class Todo {
     }
   }
 
+  inputValue() {
+    const inputAddValue = [
+      inputArticle.value,
+      inputdescription.value,
+      inputCategorie.value,
+      inputQuantity.value,
+    ];
+    const inputArticleValue = inputAddValue[0];
+    const inputDescriptionValue = inputAddValue[1];
+    const inputCategorieValue = inputAddValue[2];
+    const inputQuantityValue = inputAddValue[3];
+
+    this.creerToDo(
+      inputArticleValue,
+      inputDescriptionValue,
+      inputCategorieValue,
+      inputQuantityValue
+    ); // Ou updateToDoList à voir
+
+    this.filledInputAddToZero(inputAddValue, event);
+    this.errorInputAdd(inputAddValue, event);
+    this.renderingTodo(
+      inputAddValue[0],
+      inputAddValue[1],
+      inputAddValue[2],
+      inputAddValue[3]
+    );
+  }
+
   creerToDo(
     item,
     inputArticleValue,
@@ -262,18 +259,56 @@ class Todo {
     inputCategorieValue,
     inputQuantityValue
   ) {
-    const newTodo = [
-      {
-        textArticle: inputArticleValue,
-        textDescription: inputDescriptionValue,
-        textCategorie: inputCategorieValue,
-        textQuantity: inputQuantityValue,
-        done: false,
-        date: new Date(),
-        edit: false,
-      },
-    ];
+    if (
+      !inputArticleValue &&
+      !inputDescriptionValue &&
+      !inputCategorieValue &&
+      !inputQuantityValue
+    ) {
+      this.errorInputAdd();
+    } else {
+      this.createdAndPushedToDo(
+        inputArticleValue,
+        inputDescriptionValue,
+        inputCategorieValue,
+        inputQuantityValue
+      );
+    }
+  }
+
+  createdAndPushedToDo(
+    inputArticleValue,
+    inputDescriptionValue,
+    inputCategorieValue,
+    inputQuantityValue
+  ) {
+    const newTodo = {
+      textArticle: inputArticleValue,
+      textDescription: inputDescriptionValue,
+      textCategorie: inputCategorieValue,
+      textQuantity: inputQuantityValue,
+      done: false,
+      date: new Date(),
+      edit: false,
+    };
+    console.log(newTodo);
     arrayText.push(newTodo);
+  }
+  errorInputAdd() {
+    addArticleError.classList.remove("add-article-error");
+    addCategorieError.classList.remove("add-categorie-error");
+    addquantityError.classList.remove("add-quantity-error");
+    return;
+  }
+
+  filledInputAddToZero(inputAddValue, event) {
+    if (inputAddValue) {
+      inputArticle.value = "";
+      inputdescription.value = "";
+      inputCategorie.value = "";
+      inputQuantity.value = "";
+      event.preventDefault();
+    }
   }
 }
 export default Todo;
