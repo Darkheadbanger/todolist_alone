@@ -10,38 +10,145 @@ const arrayText = [
   },
 ];
 
+// DOM
+const ul = document.querySelector("ul");
+const formAdd = document.querySelector("#formAdd");
+const inputArticle = document.querySelector("#input-article");
+const inputdescription = document.querySelector("#input-description");
+const inputCategorie = document.querySelector("#input-categorie");
+const inputQuantity = document.querySelector("#input-quantity");
+const addArticleError = document.querySelector(".add-article-error");
+const addCategorieError = document.querySelector(".add-categorie-error");
+const addquantityError = document.querySelector(".add-quantity-error");
+
 // Créer la classe todolist
 class Todo {
   constructor() {
     this.list = document.querySelector(".list-itmes");
     this.renderingTodo();
-  }
 
-  renderingTodo() {
+    // EventListener
+    formAdd.addEventListener("submit", (event) => {
+      event.preventDefault();
+      this.updateToDo(); // Ou updateToDoList à voir
+    });
+
+    formAdd.addEventListener(
+      "blur",
+      (event) => {
+        event.target.style.color = "white";
+      },
+      true
+    );
+
+    formAdd.addEventListener(
+      "focus",
+      (event) => {
+        event.target;
+      },
+      true
+    );
+
+    formAdd.addEventListener(
+      "click",
+      (event) => {
+        event.target;
+      },
+      true
+    );
+  } 
+
+  renderingTodo(
+    inputArticleValue,
+    inputDescriptionValue,
+    inputCategorieValue,
+    inputQuantityValue
+  ) {
+    console.log(inputArticleValue);
     this.list.innerHTML = "";
-
     arrayText.forEach((item, index) => {
       if (!item.edit) {
-        this.createToDoElement(item, index);
-      }else{
+        this.createToDoElementDom(item, index);
+        this.creerToDo(
+          item,
+          index,
+          inputArticleValue,
+          inputDescriptionValue,
+          inputCategorieValue,
+          inputQuantityValue
+        );
+      } else {
         this.editToDoElement(item, index);
       }
 
-      this.toDoDone(item); 
+      this.toDoDone(item);
       this.list.appendChild(this.li);
     });
   }
-  createToDoElement(item, index, id) {
+
+  updateToDo() {
+    const inputAddValue = [
+      inputArticle.value,
+      inputdescription.value,
+      inputCategorie.value,
+      inputQuantity.value,
+    ];
+
+    this.filledInputAddToZero(inputAddValue);
+    this.errorInputAdd(inputAddValue);
+    this.renderingTodo(
+      inputAddValue[0],
+      inputAddValue[1],
+      inputAddValue[2],
+      inputAddValue[3]
+    );
+  }
+
+  filledInputAddToZero(inputAddValue) {
+    if (inputAddValue) {
+      inputArticle.value = "";
+      inputdescription.value = "";
+      inputCategorie.value = "";
+      inputQuantity.value = "";
+      addArticleError.classList.add("add-article-error");
+      addCategorieError.classList.add("add-categorie-error");
+      addquantityError.classList.add("add-quantity-error");
+    }
+  }
+  errorInputAdd(inputAddValue) {
+    console.log(
+      inputAddValue[0],
+      inputAddValue[1],
+      inputAddValue[2],
+      inputAddValue[3]
+    );
+    if (
+      inputAddValue[0] === "" &&
+      inputAddValue[1] === "" &&
+      inputAddValue[2] === "" &&
+      inputAddValue[3] === ""
+    ) {
+      addArticleError.classList.remove("add-article-error");
+      addCategorieError.classList.remove("add-categorie-error");
+      addquantityError.classList.remove("add-quantity-error");
+    }
+  }
+
+  createToDoElementDom(item) {
     this.li = document.createElement("li");
     this.li.classList.add("list");
-    const date =
-      ("0" + item.date.getDate()).slice(-2) +
-      "/" +
-      ("0" + item.date.getMonth()).slice(-2) +
-      "/" +
-      item.date.getFullYear();
-    const heure = item.date.getHours() + ":" + item.date.getMinutes();
-
+    // const dates = item.date;
+    // const date =
+    //   ("0" + dates.getDate()).slice(-2) +
+    //   "/" +
+    //   ("0" + dates.getMonth()).slice(-2) +
+    //   "/" +
+    //   dates.getFullYear();
+    // const heure = dates.getHours() + ":" + dates.getMinutes();
+    // <div class="col ms-custom-date mt-custom-date">
+    //   <p class="fw-bold card-title text-light h-custom-date">${date}</p>
+    //   <p class="fw-bold card-title text-light ms-3">${heure}</p>
+    // </div>;
     this.li.insertAdjacentHTML(
       "afterbegin",
       `<div class="col mb-4 mt-5 pe-4">
@@ -60,17 +167,7 @@ class Todo {
                   ${item.textArticle}
                 </p>
               </div>
-              <div class="col ms-custom-date mt-custom-date">
-                <p
-                  class="fw-bold card-title text-light h-custom-date"
-                >
-                  ${date}
-
-                </p>
-                <p class="fw-bold card-title text-light ms-3">
-                   ${heure}
-                </p>
-              </div>
+              <!-- ici date -->>
             </div>
           </div>
           <div class="row justify-content-md-end">
@@ -161,10 +258,32 @@ class Todo {
   }
 
   toDoDone(item) {
+    console.log(this.todoArray);
     if (item.done) {
       this.spanTodo.classList.add("done");
       this.span.classList.add("done");
     }
+  }
+
+  creerToDo(
+    item,
+    inputArticleValue,
+    inputDescriptionValue,
+    inputCategorieValue,
+    inputQuantityValue
+  ) {
+    const newTodo = [
+      {
+        textArticle: inputArticleValue,
+        textDescription: inputDescriptionValue,
+        textCategorie: inputCategorieValue,
+        textQuantity: inputQuantityValue,
+        done: false,
+        date: new Date(),
+        edit: false,
+      },
+    ];
+    arrayText.push(newTodo);
   }
 }
 export default Todo;
