@@ -30,7 +30,7 @@ class Todo {
     // EventListener
     formAdd.addEventListener("submit", (event) => {
       event.preventDefault();
-      this.updateToDo(); // Ou updateToDoList à voir
+      this.updateToDo().bind(this); // Ou updateToDoList à voir
     });
 
     formAdd.addEventListener(
@@ -56,7 +56,7 @@ class Todo {
       },
       true
     );
-  } 
+  }
 
   renderingTodo(
     inputArticleValue,
@@ -64,7 +64,6 @@ class Todo {
     inputCategorieValue,
     inputQuantityValue
   ) {
-    console.log(inputArticleValue);
     this.list.innerHTML = "";
     arrayText.forEach((item, index) => {
       if (!item.edit) {
@@ -116,12 +115,6 @@ class Todo {
     }
   }
   errorInputAdd(inputAddValue) {
-    console.log(
-      inputAddValue[0],
-      inputAddValue[1],
-      inputAddValue[2],
-      inputAddValue[3]
-    );
     if (
       inputAddValue[0] === "" &&
       inputAddValue[1] === "" &&
@@ -149,9 +142,8 @@ class Todo {
     //   <p class="fw-bold card-title text-light h-custom-date">${date}</p>
     //   <p class="fw-bold card-title text-light ms-3">${heure}</p>
     // </div>;
-    this.li.insertAdjacentHTML(
-      "afterbegin",
-      `<div class="col mb-4 mt-5 pe-4">
+
+    const html = `<div class="col mb-4 mt-5 pe-4">
     <div class="card card__element card--modifier rounded">
       <div
         class="card-header card-header__element card-header--modifier"
@@ -173,12 +165,12 @@ class Todo {
           <div class="row justify-content-md-end">
             <div class="col-6">
               <i
-                class="fa-solid fa-pen-to-square fa-xl text-success modifier-article"
+                class="fa-solid fa-pen-to-square fa-xl text-success modifier-article" data-id=""
               ></i>
             </div>
             <div class="col-6">
               <i
-                class="fa-solid fa-trash-can fa-xl text-danger delete-article"
+                class="fa-solid fa-trash-can fa-xl text-danger delete-article" data-id=""
               ></i>
             </div>
           </div>
@@ -203,12 +195,12 @@ class Todo {
           >
             <div class="col-6">
               <i
-                class="fa-solid fa-pen-to-square fa-xl text-success modifier-description"
+                class="fa-solid fa-pen-to-square fa-xl text-success modifier-description" data-id=""
               ></i>
             </div>
             <div class="col-6">
               <i
-                class="fa-solid fa-trash-can fa-xl text-danger delete-description"
+                class="fa-solid fa-trash-can fa-xl text-danger delete-description" data-id=""
               ></i>
             </div>
           </div>
@@ -239,12 +231,12 @@ class Todo {
           <div class="row justify-content-md-end">
             <div class="col-6">
               <i
-                class="fa-solid fa-pen-to-square fa-xl text-success modifier-categorie"
+                class="fa-solid fa-pen-to-square fa-xl text-success modifier-categorie data-id=""
               ></i>
             </div>
             <div class="col-6">
               <i
-                class="fa-solid fa-trash-can fa-xl text-danger delete-all"
+                class="fa-solid fa-trash-can fa-xl text-danger delete-all" data-id=""
               ></i>
             </div>
           </div>
@@ -252,13 +244,11 @@ class Todo {
       </div>
       <a class="stretched-link" href="./detail.html"></a>
     </div>
-  </div>
-`
-    );
+  </div>`;
+    this.li.insertAdjacentHTML("afterbegin", html);
   }
 
   toDoDone(item) {
-    console.log(this.todoArray);
     if (item.done) {
       this.spanTodo.classList.add("done");
       this.span.classList.add("done");
