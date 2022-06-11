@@ -138,6 +138,7 @@
                       aria-hidden="true"
                       value=""
                       placeholder="Un article ou une tâche..."
+                      required
                     />
                     <i
                       class="fa-solid fa-angle-right text-light arrow-left"
@@ -156,6 +157,7 @@
                       aria-hidden="true"
                       value=""
                       placeholder="Description..."
+                      required
                     /><i
                       class="fa-solid fa-angle-right text-light arrow-right"
                     ></i>
@@ -175,6 +177,7 @@
                       aria-hidden="true"
                       value=""
                       placeholder="Catégorie..."
+                      required
                     /><i
                       class="fa-solid fa-angle-right text-light arrow-left"
                     ></i>
@@ -192,6 +195,7 @@
                       aria-hidden="true"
                       value=""
                       placeholder="Quantité..."
+                      required
                     /><i
                       class="fa-solid fa-angle-right text-light arrow-right"
                     ></i>
@@ -202,7 +206,11 @@
                 class="row row-cols-auto justify-content-center ps-custom-row-button"
               >
                 <div class="col mt-5 pt-5">
-                  <button type="button" class="btn btn-dark mt-3 btn-add">
+                  <button
+                    type="button"
+                    class="btn btn-dark mt-3 btn-add"
+                    id="buttonAdd"
+                  >
                     Ajouter
                   </button>
                 </div>
@@ -437,9 +445,6 @@
       <div
         class="row g-4 ps-custom-container-article pt-5 mt-3 z-index-article"
       >
-        <div class="itmes">
-          <ul class="list-itmes"></ul>
-        </div>
         <div class="itmes">
           <ul class="list-itmes"></ul>
         </div>
