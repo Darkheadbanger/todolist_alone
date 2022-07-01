@@ -72,32 +72,15 @@ class Todo {
 
       // this.list.appendChild(this.li);
     });
-    this.list.innerHTML = "";
     this.list.appendChild(this.li);
-    // Ici la méthode push
-    // this.createdAndPushedToDo(
-    //   inputArticleValue,
-    //   inputDescriptionValue,
-    //   inputCategorieValue,
-    //   inputQuantityValue
-    // );
   }
 
   createToDoElementDom(item, index) {
     this.li = document.createElement("li");
     this.li.classList.add("list");
     console.log(item.date);
-    // const date =
-    //   ("0" + new Date().getDate()).slice(-2) +
-    //   "/" +
-    //   ("0" + new Date().getMonth()).slice(-2) +
-    //   "/" +
-    //   new Date().getFullYear();
-    // const heure = new Date().getHours() + ":" + new Date().getMinutes();
-    // console.log(date);
-    // console.log(heure);
 
-    const html = `<div class="col mb-4 mt-5 pe-4">
+    const html = `<div class="col mb-4 mt-5 pe-4 ">
     <div class="card card__element card--modifier rounded">
       <div
         class="card-header card-header__element card-header--modifier"
@@ -215,7 +198,10 @@ class Todo {
       <a class="stretched-link" href="./detail.html"></a>
     </div>
   </div>`;
-    this.li.insertAdjacentHTML("afterbegin", html);
+    // this.li.insertAdjacentHTML("afterbegin", html);
+    // Trouver un moyen que si l'article n'est pas encore ajouter alors c'est vide
+    // Si le formulaire est rempli et l'utilisateur clique ajouter alors on ajoute un article
+    html ? (this.list.innerHTML = "") : (this.li.innerHTML = html);
   }
 
   toDoDone(item) {
@@ -320,7 +306,6 @@ class Todo {
       inputCategorieValue,
       inputQuantityValue
     );
-    // this.createToDoElementDom(newTodo.date, newTodo.done, newTodo.edit);
   }
 
   filledInputAddToZero(inputAddValue) {
