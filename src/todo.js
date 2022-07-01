@@ -111,7 +111,7 @@ class Todo {
               <div class="col ms-3 mt-3"> 
                 <p class="fw-bold card-title text-custom-title">
                   ${item.textArticle}
-                </p>  
+                </p>   
               </div>  
             </div>
           </div>
