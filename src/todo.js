@@ -112,7 +112,7 @@ class Todo {
                 <p class="fw-bold card-title text-custom-title">
                   ${item.textArticle}
                 </p> 
-              </div> 
+              </div>
             </div>
           </div>
           <div class="col ms-custom-date mt-custom-date">
